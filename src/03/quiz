@@ -1,0 +1,137 @@
+<body class="main">
+  <h1>이지스 퍼블리싱 둘러보기</h1>
+  <h2>목차</h2>
+</body> 
+
+<a href="http://www.easyspub.co.kr" target="_blank">
+  홈페이지로 이동하기
+</a>
+
+<pre>
+  // test 변수를 선언합니다
+  var test = '';
+</pre>
+
+<form method="post">
+  <label>이메일</label>
+  <input type="text" name="email">
+  <input type="submit" value="전송하기">
+</form>
+
+<em style="color: green;">성공하였습니다</em>
+
+<a href="http://easyspub.co.kr" target="_blank" label="홈페이지 이동">링크</a>
+
+
+
+  <div class="body"> //---- App 컴포넌트의 출력함수 내용물
+     <div className="message-container"> //--TodaysPlan의 출력함수(Render)내용
+       놀러가자
+     </div>
+     <div class="buttons">
+       <div className="button-container"> //--TodaysAction의 출력함수(Render)내용
+         <button>실행</button>
+       </div>
+     </div>
+  </div>
+---
+import React from 'react';
+import TodaysPlan from './TodaysPlan';
+import [############] from './[############]';
+
+class App extends React.Component {
+  render() {
+    return (
+     <div className="body">
+       [############]
+     </div>
+    );
+  }
+}
+
+---
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
+    // 상태 정의
+    [#######]
+    this.increaseCount = this.increaseCount.bind(this);
+  }
+  increaseCount() {
+    // 상태 변경
+    [########]
+  }
+  render() {
+    return (
+      <div>
+        <span>카운트: {this.state.count}</span>
+        <button onClick={increaseCount}>카운트 증가</button>
+      </div>
+    );
+  }
+}
+
+---
+
+import React from 'react';
+class MyComponent extends React.Component {
+  componentDidUpdate() { console.log('MyComponent 새로 고침'); }
+}
+class MyPureComponent extends React.PureComponent {
+  componentDidUpdate() { console.log('MyPureComponent 새로 고침'); }
+}
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.listValue = [{ name: 'Park'}, { name: 'Lee' }];
+    this.state = { version: 0 };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.listValue[0].name = 'Justin';
+    this.setState({ version: 1 });
+    setTimeout(() => { this.listValue[0].name = 'None'; }, 100);
+    setTimeout(() => {
+      this.listValue.pop();
+      this.setState({ version: 2 });
+    }, 200);
+  }
+  render() {
+    return (
+     <div className="body">
+       <MyComponent value={this.listValue} />
+       <MyPureComponent value={this.listValue} />
+       <button onClick={this.handleClick} />
+     </div>
+    );
+  }
+}
+
+---
+
+class TodaysPlanApp extends React.Component {
+  render() {
+    const { onButtonClick } = this.props;
+    return (
+     <div className="body">
+       {hasPlan ? <TodaysPlan /> : null}
+       <button onClick={onButtonClick}>
+         계획없음
+       </button>
+     </div>
+    );
+  }
+}
+
+
+function TodaysPlanApp(props) {
+  const { onButtonClick } = props;
+  return (
+     <div className="body">
+       {hasPlan ? <TodaysPlan /> : null}
+       <button onClick={onButtonClick}>
+         계획없음
+       </button>
+     </div>
+  );
+}
