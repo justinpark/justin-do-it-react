@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './materialize.scss';
+// 아래 머터리얼 스타일 설정을 삭제합니다.
+// import './materialize.scss';
 import './App.css';
 
 import InputWithStyle from './04/InputWithStyle';

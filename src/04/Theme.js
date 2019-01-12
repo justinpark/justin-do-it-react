@@ -25,6 +25,7 @@ export default {
     white: '#FFFFFF',
     gray: '#CCCCCC',
     default: '#999999', // 기본 문자 색상
+    error: '#FF0000', // 오류 색상
   },
   // 폰트 사이즈
   size: {
