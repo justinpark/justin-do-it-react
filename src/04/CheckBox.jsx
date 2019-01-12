@@ -51,6 +51,7 @@ class CheckBox extends PureComponent {
 }
 
 CheckBox.propTypes = {
+  name: PropTypes.string.isRequired,
   autoFocus: PropTypes.bool,
   checked: PropTypes.bool,
   onChange: PropTypes.func,
