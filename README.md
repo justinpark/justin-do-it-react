@@ -1,44 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [두잇!]리액트 입문
 
-## Available Scripts
+여기 코드는 두잇! 리액트 입문 도서의 예제 및 연습문제 소스를 포함하고 있습니다.
 
-In the project directory, you can run:
+### 목차
 
-### `npm start`
+#### 2장
+* 2-1 ECMAScript란 무엇인가
+* 2-2 템플릿 스트링
+* 2-3 전개 연산자(Spread Operator)
+* 2-4 가변 변수와 불변변수
+* 2-5 화살표 함수
+* 2-6 클래스 정의
+* 2-7 추출 표현식
+* 2-8 모듈과 의존성
+* 2-9 배열 함수들(forEach, map, reduce)
+* 2-10 비동기함수(Promise)
+* 2-11 디바운스(debounce)와 스로틀(throttle)
+* 2-12 마무리: 연습예제
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### 3장
+* 3-1 컴포넌트를 표현하는 법 JSX
+* 3-2 컴포넌트와 구성요소
+* 3-3 프로퍼티(Props)
+* 3-4 상태 데이터(State)
+* 3-5 컴포넌트 생명주기(Lifecycle)
+* 3-6 클래스 컴포넌트
+* 3-7 함수형 컴포넌트
+* 3-8 리스트 컴포넌트
+* 3-9 콜백 함수와 이벤트 처리하기
+* 3-10 마무리: 기본 입력 컴포넌트 만들기
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### 4장
+* 4-1 스토리북과 화면 테스트
+* 4-2 CSS로 컴포넌트 스타일 적용하기
+* 4-3 react-with_styles로 스타일링 컴포넌트 제작하기
+* 4-4 enzyme를 활용하여 테스트 코드 작성하기
+* 4-5 마무리: 기본 UI컴포넌트 만들기
