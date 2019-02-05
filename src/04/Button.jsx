@@ -13,6 +13,7 @@ class Button extends PureComponent {
       xsmall,
       primary,
       secondary,
+      onPress,
     } = this.props;
     return (
       <button
@@ -25,6 +26,7 @@ class Button extends PureComponent {
           secondary && styles.secondary,
           primary && styles.primary,
         )}
+        onClick={onPress}
       >
         {children}
       </button>
@@ -32,7 +34,7 @@ class Button extends PureComponent {
   }
 }
 
-Text.propTypes = {
+Button.propTypes = {
   children: PropTypes.node.isRequired,
   xsmall: PropTypes.bool,
   small: PropTypes.bool,
@@ -40,6 +42,16 @@ Text.propTypes = {
   xlarge: PropTypes.bool,
   secondary: PropTypes.bool,
   primary: PropTypes.bool,
+  onPress: PropTypes.func,
+};
+Button.defaultProps = {
+  onPress: () => {},
+  xsmall: false,
+  small: false,
+  large: false,
+  xlarge: false,
+  secondary: false,
+  primary: false,
 };
 
 export default withStyles(({ color, size, unit, responsive }) => ({
