@@ -10,7 +10,8 @@
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.1",
     "react-test-renderer": "^16.7.0",
-    "react-with-styles": "^3.2.1"
+    "react-with-styles": "^3.2.1",
+    "recompose": "^0.30.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
