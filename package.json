@@ -8,10 +8,12 @@
     "enzyme-adapter-react-16.3": "^1.4.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
     "react-scripts": "2.1.1",
     "react-test-renderer": "^16.7.0",
     "react-with-styles": "^3.2.1",
-    "recompose": "^0.30.0"
+    "recompose": "^0.30.0",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
@@ -36,6 +38,7 @@
     "aphrodite": "^2.2.3",
     "node-sass": "^4.11.0",
     "react-with-styles-interface-aphrodite": "^5.0.1",
+    "redux-devtools-extension": "^2.13.8",
     "sass-loader": "^7.1.0",
     "storybook-addon-jsx": "^6.0.0"
   }
