@@ -9,7 +9,7 @@ class FormProvider extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      values: {},
+      values: this.props.initValues,
       errors: {},
     };
     this.reset = this.reset.bind(this);
@@ -75,6 +75,7 @@ FormProvider.propTypes = {
 };
 
 FormProvider.defaultProps = {
+  initValues: {},
   validate: () => ({}),
 };
 

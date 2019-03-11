@@ -6,6 +6,7 @@
       "name": "비트코인(BTX)",
       "totalPrice": 12391230000,
       "currentPrice": 1020000,
+      "amount": 0.23,
       "datetime": "2019/01/20 08:23:22"
     },
     {
@@ -14,6 +15,7 @@
       "name": "리플(RXP)",
       "totalPrice": 1230000,
       "currentPrice": 20000,
+      "amount": 10,
       "datetime": "2019/01/20 07:23:22"
     }
   ]
