@@ -3717,6 +3717,11 @@ delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
 
+deline@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/deline/-/deline-1.0.4.tgz#6c05c87836926e1a1c63e47882f3d2eb2c6f14c9"
+  integrity sha1-bAXIeDaSbhocY+R4gvPS6yxvFMk=
+
 depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
@@ -9240,6 +9245,15 @@ redux-devtools-extension@^2.13.8:
   version "2.13.8"
   resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.8.tgz#37b982688626e5e4993ff87220c9bbb7cd2d96e1"
 
+redux-pack@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/redux-pack/-/redux-pack-0.1.5.tgz#1973b26ef749dfc020e8a61d54cf3e55ec8ae4cd"
+  integrity sha1-GXOybvdJ38Ag6KYdVM8+VeyK5M0=
+  dependencies:
+    deline "^1.0.4"
+    invariant "^2.2.2"
+    uuid "^3.0.1"
+
 redux-thunk@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
@@ -9471,6 +9485,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
+reselect@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/reselect/-/reselect-4.0.0.tgz#f2529830e5d3d0e021408b246a206ef4ea4437f7"
+  integrity sha512-qUgANli03jjAyGlnbYVAV5vvnOmJnODyABz51RdBN7M4WaVu8mecZWgyQNkG8Yqe3KRGRt0l4K4B3XVEULC4CA==
+
 resolve-cwd@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-2.0.0.tgz#00a9f7387556e27038eae232caa372a6a59b665a"
@@ -9678,6 +9697,11 @@ scss-tokenizer@^0.2.3:
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
+
+selector-action@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/selector-action/-/selector-action-1.1.1.tgz#665d1232661505293a6d5a3538e2d9367f16c477"
+  integrity sha512-Y4EPkt8MoMo7NWhYTvdn95e/ZOek0vvaJuaMFjhAZPDtqYAExv3PebPDNkx9UYU33O1zx4GsNoGEbYVQiprULg==
 
 selfsigned@^1.9.1:
   version "1.10.4"

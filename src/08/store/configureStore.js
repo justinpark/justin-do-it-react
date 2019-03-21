@@ -3,6 +3,9 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import reducers from '../reducers';
 import { SET_TRANSACTION_LIST } from '../actions/transactionActions';
 import thunk from 'redux-thunk';
+import { middleware as reduxPackMiddleware } from 'redux-pack';
+import searchFilterEffects from '../middlewares/searchFilterEffects';
+
 import notificationEffects from '../middlewares/notificationEffects';
 const customMiddleware = store => nextRunner => action => {
   console.log('미들웨어에 전달된 액션 객체', action);
@@ -54,8 +57,8 @@ export default initStates => createStore(
   combineReducers(reducers),
   initStates,
   composeWithDevTools(
-    applyMiddleware(thunk),
-    applyMiddleware(notificationEffects),
+    applyMiddleware(notificationEffects, searchFilterEffects),
+    applyMiddleware(thunk, reduxPackMiddleware),
     // applyMiddleware(customMiddleware, customMiddleware2),
     // applyMiddleware(customMiddleware3),
   ),

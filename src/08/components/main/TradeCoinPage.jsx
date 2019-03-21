@@ -13,23 +13,26 @@ class TradeCoinPage extends PureComponent {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleSubmit(values) {
+  handleSubmit(values, closeModal) {
     const { name, createTransaction } = this.props;
     const formValues = {
       ...values,
-      name,
+      name
     };
-    createTransaction(formValues);
+    createTransaction(formValues, closeModal);
   }
   render() {
     const { name, price, type } = this.props;
     const typeName = type === 'sell' ? '판매' : '구매';
     return (
-      <Form onSubmit={this.handleSubmit} initValues={{ currentPrice: price }}>
-        <Form.Consumer>
-          {({ onChange, values }) => (
-            <Modal>
-              {({ closeModal }) => (
+      <Modal>
+        {({ closeModal }) => (
+          <Form
+            onSubmit={values => this.handleSubmit(values, closeModal)}
+            initValues={{ currentPrice: price }}
+          >
+            <Form.Consumer>
+              {({ onChange, values }) => (
                 <Spacing horizontal={4} vertical={8}>
                   <Text xlarge bold>
                     {name} {typeName}
@@ -51,16 +54,16 @@ class TradeCoinPage extends PureComponent {
                   </InlineList>
                 </Spacing>
               )}
-            </Modal>
-          )}
-        </Form.Consumer>
-      </Form>
+            </Form.Consumer>
+          </Form>
+        )}
+      </Modal>
     );
   }
 }
 
 TradeCoinPage.propTypes = {
-  createTransaction: PropTypes.func,
+  createTransaction: PropTypes.func
 };
 
 export default TradeCoinPage;

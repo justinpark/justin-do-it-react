@@ -15,14 +15,17 @@
     "react-with-styles": "^3.2.1",
     "recompose": "^0.30.0",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-pack": "^0.1.5",
+    "redux-thunk": "^2.3.0",
+    "reselect": "^4.0.0",
+    "selector-action": "^1.1.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "mockserver": "json-server --watch --delay 500 --port 4000 mock/db.json",
+    "mockserver": "json-server --watch --delay 500 --port 4000 mock/create.js",
     "errorserver": "node mock/fake.js",
     "eject": "react-scripts eject"
   },
