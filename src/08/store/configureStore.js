@@ -57,8 +57,9 @@ export default initStates => createStore(
   combineReducers(reducers),
   initStates,
   composeWithDevTools(
-    applyMiddleware(notificationEffects, searchFilterEffects),
-    applyMiddleware(thunk, reduxPackMiddleware),
+    // applyMiddleware(searchFilterEffects),
+    applyMiddleware(thunk, reduxPackMiddleware, searchFilterEffects, notificationEffects),
+    // applyMiddleware(notificationEffects),
     // applyMiddleware(customMiddleware, customMiddleware2),
     // applyMiddleware(customMiddleware3),
   ),
