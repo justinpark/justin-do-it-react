@@ -10,6 +10,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.1",
     "react-test-renderer": "^16.7.0",
     "react-with-styles": "^3.2.1",

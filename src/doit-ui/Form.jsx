@@ -5,13 +5,17 @@ const { Provider, Consumer } = React.createContext({});
 
 class FormProvider extends React.PureComponent {
   static Consumer = Consumer;
+  static getDerivedStateFromProps({ initValues }) {
+
+    return {
+      values: initValues,
+      errors: {},
+    };
+  }
 
   constructor(props) {
     super(props);
-    this.state = {
-      values: this.props.initValues,
-      errors: {},
-    };
+    this.state = {};
     this.reset = this.reset.bind(this);
     this.validate = this.validate.bind(this);
     this.onChange = this.onChange.bind(this);
