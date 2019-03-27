@@ -12,7 +12,7 @@ export default store => nextRunner => action => {
     if (success && meta[KEY.LIFECYCLE] === LIFECYCLE.SUCCESS) {
       store.dispatch(showMessage(success));
     } else if (error && meta[KEY.LIFECYCLE] === LIFECYCLE.FAILURE) {
-      const { errorMessage } = payload.response.data;
+      const { errorMessage } = payload.response ? payload.response.data : {};
       store.dispatch(showMessage(errorMessage || error, true));
     }
   // } else if (type === SET_ERROR) {

@@ -102,7 +102,7 @@ export default (...reducerNames) => {
               }
             },
             failure: prevState => {
-              const { errorMessage } = payload.response.data;
+              const { errorMessage } = payload.response ? payload.response.data : {};
               return {
                 ...prevState,
                 loadingState: {
