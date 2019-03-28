@@ -26,7 +26,7 @@ class TransactionSearchFilter extends PureComponent {
     const querystring = Object.entries(params)
       .filter(entries => entries[1] !== '')
       .map(([key, value]) => `${key}=${value}`)
-      .join('&')
+      .join('&');
     history.push(`/?${querystring}`);
 
     // Api.get('/transactions', { params })
