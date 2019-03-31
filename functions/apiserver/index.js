@@ -21,7 +21,7 @@ app.post('/transactions', (req, res) => {
     ...req.body,
     currentPrice,
     totalPrice: currentPrice * amount,
-    datetime: functions.config().firebase.firestore.FieldValue.serverTimestamp(),
+    datetime: admin.firestore.FieldValue.serverTimestamp(),
   };
   db.collection('transactions').add(data).then(doc => {
     db.collection('transactions').doc(doc.id).get().then(doc => {
