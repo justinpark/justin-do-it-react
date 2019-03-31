@@ -7,6 +7,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16.3": "^1.4.1",
     "moment": "^2.24.0",
+    "next": "^8.0.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
@@ -22,6 +23,12 @@
     "selector-action": "^1.1.1"
   },
   "scripts": {
+    "dev": "next",
+    "predeploy": "yarn build-all",
+    "deploy": "firebase deploy",
+    "build-all": "yarn ssrbuild && yarn build-firebase",
+    "build-firebase": "cd \"./functions\" && yarn --ignore-engines",
+    "ssrbuild": "next build",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "start": "react-scripts start",
     "build": "react-scripts build",

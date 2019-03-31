@@ -14,10 +14,11 @@ class TradeCoinPage extends PureComponent {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(values, closeModal) {
-    const { name, createTransaction } = this.props;
+    const { name, code, createTransaction } = this.props;
     const formValues = {
       ...values,
-      name
+      code,
+      name,
     };
     createTransaction(formValues, closeModal);
   }
@@ -46,7 +47,11 @@ class TradeCoinPage extends PureComponent {
                     />
                   </Spacing>
                   <Spacing bottom={2}>
-                    <Input name="amount" label="수량" />
+                    <Input name="amount"
+                      label="수량"
+                      value={values['amount']}
+                      onChange={onChange}
+                    />
                   </Spacing>
                   <InlineList spacingBetween={1}>
                     <Button primary>{typeName}</Button>

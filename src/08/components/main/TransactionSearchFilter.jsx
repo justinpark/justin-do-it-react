@@ -24,7 +24,7 @@ class TransactionSearchFilter extends PureComponent {
       .reduce((obj, [key, value]) => ({ ...obj, [key]: value }), {});
     // setFilter(cleanedParams);
     const querystring = Object.entries(params)
-      .filter(entries => entries[1] !== '')
+      .filter(entries => !!entries[1])
       .map(([key, value]) => `${key}=${value}`)
       .join('&');
     history.push(`/?${querystring}`);
