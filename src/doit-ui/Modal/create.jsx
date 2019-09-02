@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import Modal from '../Modal'; // 혹은 import Modal from './index';
 
-export const { Provider, Consumer } = React.createContext({});
+import { Provider } from './context';
 
 export default function createModalProvider(ContentMap = {}) {
   return class ModalProvider extends PureComponent {
