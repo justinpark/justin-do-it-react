@@ -7,7 +7,7 @@ import ModalProviderWithKey, {
   CONFIRM_DELETE_MODAL,
   SOME_NEW_MODAL,
 } from '../06/ModalProviderWithKey';
-import { Consumer } from '../06/createModalProvider';
+import { Consumer } from '../06/ModalContext';
 import Button from '../04/Button';
 import Text from '../04/Text';
 
@@ -31,7 +31,7 @@ storiesOf('Modal', module)
         </Text>
         <ModalProvider.Consumer>
           {({ openModal }) => (
-            <Button onPress={() => openModal()}>모달 열기</Button>
+            <Button onPress={() => openModal()}>삭제</Button>
           )}
         </ModalProvider.Consumer>
       </div>
