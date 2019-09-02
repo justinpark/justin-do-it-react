@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const { Provider, Consumer } = React.createContext({});
+import { Provider } from './FormContext';
 
 export default class FormProvider extends React.PureComponent {
-  static Consumer = Consumer;
-
   constructor(props) {
     super(props);
     this.state = {

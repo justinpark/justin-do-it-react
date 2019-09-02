@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 
 import Input from '../04/InputWithStyle';
-import Form from './Form';
+import { Consumer } from './FormContext';
 
 class FormConsumerExample extends PureComponent {
   render() {
     const { name, ...otherProps } = this.props;
     return (
-      <Form.Consumer>
+      <Consumer>
         {({ values, errors, onChange }) => (
           <Input
             {...otherProps}
@@ -17,7 +17,7 @@ class FormConsumerExample extends PureComponent {
             errorMessage={errors[name]}
           />
         )}
-      </Form.Consumer>
+      </Consumer>
     );
   }
 }
