@@ -6,8 +6,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <div><b>지루할때:</b><BooleanComponent bored /></div>
-        <div><b>즐거울때:</b><BooleanComponent /></div>
+        <div><b>지루할 때:</b><BooleanComponent bored /></div>
+        <div><b>즐거울 때:</b><BooleanComponent /></div>
       </div>
     );
   }
