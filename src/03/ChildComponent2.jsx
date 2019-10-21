@@ -10,8 +10,8 @@ class ChildComponent2 extends React.Component {
 
     return (
       <div>
-        <span>객체값: {String(objValue)}</span>
-        <span>필수값: {requiredStringValue}</span>
+        <div>객체값: {String(Object.entries(objValue))}</div>
+        <div>필수값: {requiredStringValue}</div>
       </div>
     );
   }
