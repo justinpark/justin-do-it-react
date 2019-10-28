@@ -67,6 +67,10 @@ export default withStyles(({ color, size, unit, responsive }) => ({
     fontSize: size.md,
     padding: unit * 2,
     cursor: 'pointer',
+    [responsive.small]: {
+      width: '100%',
+    },
+
   },
   fullWidth: {
     width: '100%',
