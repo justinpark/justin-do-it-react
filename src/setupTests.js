@@ -13,7 +13,7 @@ afterEach(() => {
 });
 
 beforeEach(() => {
-  jest.spyOn(global.console, 'error').mockImplementation((e) => {
+  jest.spyOn(console, 'error').mockImplementation((e) => {
     throw new Error(e);
   });
 });
