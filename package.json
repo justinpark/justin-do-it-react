@@ -48,6 +48,7 @@
   ],
   "devDependencies": {
     "@babel/core": "7.5.5",
+    "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
     "@storybook/addon-actions": "^4.1.4",
     "@storybook/addons": "^4.1.4",
     "@storybook/react": "^4.1.13",
