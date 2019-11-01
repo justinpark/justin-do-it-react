@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 
 class RCC extends Component {
   render() {
-    return (
-      <div>
-        
-      </div>
-    );
+    var text = '따옴표';
+    return <div name="name">{text}</div>;
   }
 }
 
