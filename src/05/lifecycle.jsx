@@ -1,19 +1,28 @@
+import React from 'react';
 import lifecycle from 'recompose/lifecycle';
-import Counter from '../03/Counter';
-import TodaysPlan from '../03/TodaysPlan';
+import compose from 'recompose/compose';
+import withLoading from './withLoading';
+
+function Page({ content }) {
+  return (
+    <div>
+      페이지 로딩이 완료되었습니다.
+      {content}
+    </div>
+  );
+}
 
 export const withLoadData = lifecycle({
-  state: { loading: true, count: 0 },
+  state: { isLoading: true, content: '' },
   componentDidMount: function() {
     if (this.props.loadData) {
-      this.props.loadData().then((count) => this.setState({ loading: false, count }));
+      this.props.loadData().then(content => this.setState({ isLoading: false, content }));
     }
   },
 });
 
-const CounterWithLoadData = withLoadData(Counter);
-const TodaysPlanWithLoadData = withLoadData(TodaysPlan);
-
-const ComponentWithLoadData = withLoadData(({ loading }) => loading ? '로딩중': '완료');
-// <ComponentWithLoadData loadData={() => fetch('google.com')} />
-
+export const PageWithLoadData = withLoadData(Page);
+export const PageWithLoadDataAndLoading = compose(
+  withLoadData,
+  withLoading('서버 요청중'),
+)(Page);

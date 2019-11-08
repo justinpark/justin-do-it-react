@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme'; 
+import { shallow } from 'enzyme';
 
 import Input from '../../04/InputWithStyle';
 import withError from '../../05/withError';
@@ -26,7 +26,9 @@ describe('withError', () => {
 
   it('renders custom errorMessage with hasError', () => {
     const customErrorMessage = '필수입력 항목입니다';
-    const wrapper = shallow(<InputWithError errorMessage={customErrorMessage} name="name" hasError />).dive();
+    const wrapper = shallow(
+      <InputWithError errorMessage={customErrorMessage} name="name" hasError />,
+    ).dive();
     expect(wrapper.text()).toContain(customErrorMessage);
   });
 });
