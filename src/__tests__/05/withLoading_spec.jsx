@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme'; 
+import { shallow } from 'enzyme';
 
 import Button from '../../04/Button';
 import withLoading from '../../05/withLoading';
@@ -24,7 +24,7 @@ describe('withLoading', () => {
   });
 
   it('renders loadingMessage with isLoading', () => {
-    const customLoadingMessage = '로딩중';
+    const customLoadingMessage = '기다려주세요...';
     const ButtonWithLoadingMessage = withLoading(customLoadingMessage)(Button);
     const wrapper = shallow(<ButtonWithLoadingMessage isLoading>테스트</ButtonWithLoadingMessage>);
     expect(wrapper.text()).toEqual(customLoadingMessage);

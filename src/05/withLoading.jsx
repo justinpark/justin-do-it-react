@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (loadingMessage = '---') => WrappedComponent => {
+export default (loadingMessage = '로딩중') => WrappedComponent => {
   const { displayName, name: componentName } = WrappedComponent;
   const wrappedComponentName = displayName || componentName;
 
@@ -8,10 +8,9 @@ export default (loadingMessage = '---') => WrappedComponent => {
     if (isLoading) {
       return loadingMessage;
     }
-    return (
-      <WrappedComponent {...props} />
-    );
-  };
+
+    return <WrappedComponent {...props} />;
+  }
   WithLoading.displayName = `withLoading(${wrappedComponentName})`;
   return WithLoading;
 };
