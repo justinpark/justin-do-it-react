@@ -1,12 +1,22 @@
 import React, { PureComponent } from 'react';
-import ButtonWithLoadingContext from './ButtonWithLoadingContext';
 import LoadingProviderWithKey from './LoadingProviderWithKey';
+import {
+  ButtonWithDefaultLoadingContext,
+  ButtonWithLoading2Context,
+} from './ButtonWithLoadingContextAndKey';
 
 const LoadingProvider1 = LoadingProviderWithKey();
 const LoadingProvider2 = LoadingProviderWithKey('loading2');
-const TableComponent = () => <ButtonWithLoadingContext label="버튼" />;
+function TableComponent() {
+  return (
+    <table>
+      <ButtonWithDefaultLoadingContext>컨텍스트1</ButtonWithDefaultLoadingContext>
+      <ButtonWithLoading2Context>컨텍스트2</ButtonWithLoading2Context>
+    </table>
+  );
+}
 
-class HomePageComponentWithTwoProvider  extends PureComponent {
+class HomePageComponentWithTwoProvider extends PureComponent {
   render() {
     return (
       <LoadingProvider1>
@@ -18,4 +28,4 @@ class HomePageComponentWithTwoProvider  extends PureComponent {
   }
 }
 
-export default HomePageComponentWithTwoProvider ;
+export default HomePageComponentWithTwoProvider;

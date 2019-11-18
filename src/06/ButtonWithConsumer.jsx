@@ -11,16 +11,12 @@ function ButtonWithConsumer({ label }) {
     <React.Fragment>
       <DefaultLoadingConsumer
         render={({ loading, setLoading }) => (
-          <Button onPress={() => setLoading(!loading)}>
-            {loading ? '로딩중' : label}
-          </Button>
+          <Button onPress={() => setLoading(!loading)}>{loading ? '로딩중' : label}</Button>
         )}
       />
       <Loading2Consumer
         render={({ loading, setLoading }) => (
-          <Button onPress={() => setLoading(!loading)}>
-            {loading ? '로딩중' : label}
-          </Button>
+          <Button onPress={() => setLoading(!loading)}>{loading ? '로딩중' : label}</Button>
         )}
       />
       <DefaultLoadingConsumer
@@ -28,7 +24,7 @@ function ButtonWithConsumer({ label }) {
           <Loading2Consumer
             render={({ loading: loading2 }) => (
               <Button onPress={() => setLoading(!loading)}>
-                {loading && loading2 ? '로딩중' : label}
+                {loading || loading2 ? '로딩중' : label}
               </Button>
             )}
           />

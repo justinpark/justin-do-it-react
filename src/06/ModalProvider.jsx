@@ -5,9 +5,9 @@ import Text from '../04/Text';
 
 const { Provider, Consumer } = React.createContext({});
 
-class ModalProvider extends PureComponent {
-  static Consumer = Consumer;
+export { Consumer };
 
+class ModalProvider extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -41,9 +41,7 @@ class ModalProvider extends PureComponent {
         {showModal && (
           <Modal>
             <div>
-              <Text>
-                정말로 삭제 하시겠습니까?
-              </Text>
+              <Text>정말로 삭제 하시겠습니까?</Text>
             </div>
             <Button primary>예</Button>
             <Button onPress={() => this.setState({ showModal: false })}>닫기</Button>

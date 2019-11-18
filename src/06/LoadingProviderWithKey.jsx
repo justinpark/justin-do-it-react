@@ -8,13 +8,11 @@ export const contextPropTypes = {
 };
 
 export default (contextKey = DEFAULT_KEY) => {
-  class LoadingProvider extends React.PureComponent {
+  class LoadingProvider extends React.Component {
     constructor(props) {
       super(props);
 
-      this.state = {
-        [contextKey]: { loading: false },
-      };
+      this.state = { loading: false };
       this.setLoading = this.setLoading.bind(this);
     }
 
@@ -28,11 +26,9 @@ export default (contextKey = DEFAULT_KEY) => {
     }
 
     setLoading(loading) {
-      this.setState({
-        [contextKey]: { loading },
-      });
+      this.setState({ loading });
     }
-  
+
     render() {
       return this.props.children;
     }

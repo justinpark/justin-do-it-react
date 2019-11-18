@@ -1,32 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../04/Button';
-import LoadingProvider from './LoadingProviderWithNewContext';
+import { Consumer } from './LoadingProviderWithNewContext';
 
 function ButtonWithNewConsumer({ label }) {
   return (
     <React.Fragment>
-      <LoadingProvider>
+      <Consumer>
         {({ loading, setLoading }) => (
           <Button onPress={() => setLoading('loading', !loading)}>
             {loading ? '로딩중' : label}
           </Button>
         )}
-      </LoadingProvider>
-      <LoadingProvider>
+      </Consumer>
+      <Consumer>
         {loading => (
           <Button onPress={() => loading.setLoading('loading2', !loading.loading2)}>
             {loading.loading2 ? '로딩중' : label}
           </Button>
         )}
-      </LoadingProvider>
-      <LoadingProvider>
-        {({ loading, loading2 }) => (
-          <Button>
-            {loading && loading2 ? '로딩중' : label}
-          </Button>
-        )}
-      </LoadingProvider>
+      </Consumer>
+      <Consumer>
+        {({ loading, loading2 }) => <Button>{loading && loading2 ? '로딩중' : label}</Button>}
+      </Consumer>
     </React.Fragment>
   );
 }

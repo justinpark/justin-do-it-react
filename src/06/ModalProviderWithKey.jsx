@@ -1,13 +1,13 @@
 import createModalProvider from './createModalProvider';
 import DeleteModalContent from './DeleteModalContent';
-import SomeNewModalContent from './NewModalContent';
+import CreateMemberModalContent from './CreateMemberModalContent';
 
 export const CONFIRM_DELETE_MODAL = 'confirm_delete_modal';
-export const SOME_NEW_MODAL = 'new_modal';
+export const CREATE_MEMBER_MODAL = 'create_member_modal';
 
 const CONTENT_MAP = {
   [CONFIRM_DELETE_MODAL]: DeleteModalContent,
-  [SOME_NEW_MODAL]: SomeNewModalContent,
+  [CREATE_MEMBER_MODAL]: CreateMemberModalContent,
 };
 
 export default createModalProvider(CONTENT_MAP);

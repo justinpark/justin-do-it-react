@@ -8,11 +8,10 @@ export default (contextKey = DEFAULT_KEY) => WrappedComponent => {
   const wrappedComponentName = displayName || componentName;
 
   function WithLoadingContext(props, context) {
-    const { loading, setLoading } = context
-    return (
-      <WrappedComponent {...props} loading={loading} setLoading={setLoading} />
-    );
-  };
+    const { loading, setLoading } = context[contextKey];
+    console.log('c', context);
+    return <WrappedComponent {...props} loading={loading} setLoading={setLoading} />;
+  }
   WithLoadingContext.displayName = `withLoadingContext(${wrappedComponentName})`;
   WithLoadingContext.contextTypes = {
     [contextKey]: contextPropTypes,

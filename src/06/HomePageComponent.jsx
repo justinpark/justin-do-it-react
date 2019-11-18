@@ -3,7 +3,22 @@ import PropTypes from 'prop-types';
 import ButtonWithContext from './ButtonWithContext';
 import Button from '../04/Button';
 
-const TableComponent = () => <ButtonWithContext label="버튼" />;
+function RowBComponent() {
+  return <Button>버튼</Button>;
+}
+
+function RowCComponent() {
+  return <ButtonWithContext>버튼</ButtonWithContext>;
+}
+
+function TableComponent() {
+  return (
+    <table>
+      <RowBComponent />
+      <RowCComponent />
+    </table>
+  );
+}
 
 class HomePageComponent extends PureComponent {
   constructor(props) {
