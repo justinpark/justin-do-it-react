@@ -12,20 +12,27 @@ export default class FormProvider extends React.PureComponent {
     };
     this.reset = this.reset.bind(this);
     this.onChange = this.onChange.bind(this);
+    this.submit = this.submit.bind(this);
   }
 
   onChange(name, updatedValue) {
-    this.validate(this.state.values);
-    this.setState(({ values }) => ({
-      values: {
-        ...values,
-        [name]: updatedValue,
-      },
-    }));
+    this.setState(
+      ({ values }) => ({
+        values: {
+          ...values,
+          [name]: updatedValue,
+        },
+      }),
+      () => this.validate(this.state.values),
+    );
   }
 
   reset() {
-    this.setState({ values: {} });
+    this.setState({ values: {}, errors: {} });
+  }
+
+  submit() {
+    this.props.onSubmit(this.state.values);
   }
 
   validate(values) {
@@ -34,9 +41,9 @@ export default class FormProvider extends React.PureComponent {
       return;
     }
     const errors = this.props.validate(values);
-    this.setState(({
+    this.setState({
       errors,
-    }));
+    });
   }
 
   render() {
@@ -48,6 +55,7 @@ export default class FormProvider extends React.PureComponent {
           values,
           onChange: this.onChange,
           reset: this.reset,
+          submit: this.submit,
         }}
       >
         {this.props.children}
@@ -58,12 +66,12 @@ export default class FormProvider extends React.PureComponent {
 
 FormProvider.propTypes = {
   validate: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 FormProvider.defaultProps = {
   validate: () => ({}),
 };
-
 
 /*
 const validate = (values) => {
