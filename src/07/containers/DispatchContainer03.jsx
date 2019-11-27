@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ActionComponent from '../ActionComponent';
+import ActionComponent from '../ActionComponent02';
 import { setLoading, resetLoading } from '../actions/loadingActions';
 import { setUser } from '../actions/userActions';
 import { setCollection, setAge } from '../actions/collectionActions';
@@ -11,11 +11,5 @@ const mapDispatchToProps = {
   setAge,
   setCollection,
 };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     setLoading: loading => dispatch(setLoading(loading)),
-//   };
-// };
 
 export default connect(null, mapDispatchToProps)(ActionComponent);

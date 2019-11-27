@@ -1,5 +1,5 @@
-import React, { PureComponent } from "react";
-import PropTypes from "prop-types";
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 
 class SearchResultTable extends PureComponent {
   render() {
@@ -28,11 +28,11 @@ SearchResultTable.propTypes = {
     PropTypes.shape({
       id: PropTypes.number,
       name: PropTypes.name,
-      age: PropTypes.number
-    })
-  )
+      age: PropTypes.number,
+    }),
+  ),
 };
 SearchResultTable.defaultProps = {
-  items: []
+  items: [],
 };
 export default SearchResultTable;
