@@ -6,17 +6,21 @@ import createLoadingConsumer from './createLoadingConsumer';
 const DefaultLoadingConsumer = createLoadingConsumer();
 const Loading2Consumer = createLoadingConsumer('loading2');
 
-function ButtonWithConsumer({ label }) {
+function ButtonWithConsumer({ children }) {
   return (
     <React.Fragment>
       <DefaultLoadingConsumer
         render={({ loading, setLoading }) => (
-          <Button onPress={() => setLoading(!loading)}>{loading ? '로딩중' : label}</Button>
+          <Button onPress={() => setLoading(!loading)}>
+            {loading ? '컨텍스트1 로딩중' : children}
+          </Button>
         )}
       />
       <Loading2Consumer
         render={({ loading, setLoading }) => (
-          <Button onPress={() => setLoading(!loading)}>{loading ? '로딩중' : label}</Button>
+          <Button onPress={() => setLoading(!loading)}>
+            {loading ? '컨텍스트2 로딩중' : children}
+          </Button>
         )}
       />
       <DefaultLoadingConsumer
@@ -24,7 +28,7 @@ function ButtonWithConsumer({ label }) {
           <Loading2Consumer
             render={({ loading: loading2 }) => (
               <Button onPress={() => setLoading(!loading)}>
-                {loading || loading2 ? '로딩중' : label}
+                {loading || loading2 ? '로딩중' : children}
               </Button>
             )}
           />
@@ -35,7 +39,7 @@ function ButtonWithConsumer({ label }) {
 }
 
 ButtonWithConsumer.propTypes = {
-  label: PropTypes.string,
+  children: PropTypes.string,
 };
 
 export default ButtonWithConsumer;

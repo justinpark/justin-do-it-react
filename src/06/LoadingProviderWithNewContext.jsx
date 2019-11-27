@@ -4,7 +4,7 @@ const { Provider, Consumer } = React.createContext({});
 
 export { Consumer };
 
-export default class LoadingProvider extends React.PureComponent {
+export default class LoadingProvider extends React.Component {
   constructor(props) {
     super(props);
 
