@@ -1,69 +1,24 @@
 // ES5의 예제
-function msgAfterTimeout (msg, who, timeout, onDone) {
-  setTimeout(function () {
-    onDone(msg + ' 안녕 ' + who + '!');
-  }, timeout);
+function work1(onDone) {
+  setTimeout(() => onDone('작업1 완료!'), 100);
 }
-
-msgAfterTimeout('', '금', 100, function (msg) {
-  msgAfterTimeout(msg, '은', 200, function (msg) {
-    msgAfterTimeout(msg, '동', 300, function (msg) {
-      console.log('done after 600ms:' + msg);
+function work2(onDone) {
+  setTimeout(() => onDone('작업1 완료!'), 200);
+}
+function work3(onDone) {
+  setTimeout(() => onDone('작업3 완료!'), 300);
+}
+function urgentWork() {
+  console.log('긴급 작업');
+}
+// 실제 비동기 함수를 사용하는 예
+work1(function(msg1) {
+  console.log('done after 100ms:' + msg1);
+  work2(function(msg2) {
+    console.log('done after 300ms:' + msg2);
+    work3(function(msg3) {
+      console.log('done after 600ms:' + msg3);
     });
   });
 });
-
-// ES6의 예제
-// var fn = function (resolve, reject) {};
-// new Promise(fn);
-function msgAfterTimeout (msg, who, timeout) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(`${msg} 안녕 ${who}!`), timeout);
-  });
-}
-msgAfterTimeout('', '금', 100)
-  .then((msg) => msgAfterTimeout(msg, '은', 200))
-  .then((msg) => msgAfterTimeout(msg, '동', 200))
-  .then((msg) => {
-    console.log(`done after 600ms:${msg}`);
-  });
-// 안녕 동! 안녕 은! 안녕 금!
-
-class Promise {
-  constructor(fn) {
-    function resolve() {
-      if (typeof this.onDone === 'function') {
-        this.onDone.apply(null, arguments);
-      }
-      if (typeof this.onComplete === 'function') {
-        this.onComplete();
-      }
-    }
-    function reject() {
-      if (typeof this.onError === 'function') {
-        this.onError.apply(null, arguments);
-      }
-      if (typeof this.onComplete === 'function') {
-        this.onComplete();
-      }
-    }
-    fn(resolve.bind(this), reject.bind(this));
-  }
-  then(onDone, onError) {
-    this.onDone = onDone;
-    this.onError = onError;
-    return this;
-  }
-  catch(onError) {
-    this.onError = onError;
-    return this;
-  }
-  finally(onComplete) {
-    this.onComplete = onComplete;
-    return this;
-  }
-}
-
-// var fn = function (resolve, reject) {};
-// p = new Promise(fn);
-// p.then(resolver, rejecter).catch(otherRejector).finally(afterResolveorReject);
+urgentWork();
