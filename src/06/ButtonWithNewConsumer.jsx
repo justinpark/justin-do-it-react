@@ -7,16 +7,16 @@ function ButtonWithNewConsumer({ label }) {
   return (
     <React.Fragment>
       <Consumer>
-        {({ loading, setLoading }) => (
-          <Button onPress={() => setLoading('loading', !loading)}>
-            {loading ? '로딩중' : label}
+        {value => (
+          <Button onPress={() => value.setLoading('loading', !value.loading)}>
+            {value.loading ? '로딩중' : label}
           </Button>
         )}
       </Consumer>
       <Consumer>
-        {loading => (
-          <Button onPress={() => loading.setLoading('loading2', !loading.loading2)}>
-            {loading.loading2 ? '로딩중' : label}
+        {({ loading2, setLoading }) => (
+          <Button onPress={() => setLoading('loading2', !loading2)}>
+            {loading2 ? '로딩중' : label}
           </Button>
         )}
       </Consumer>
