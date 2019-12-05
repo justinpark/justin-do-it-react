@@ -19,7 +19,7 @@ describe('withLoading', () => {
 
   it('renders default loading message with isLoading', () => {
     const wrapper = shallow(<ButtonWithLoading isLoading>테스트</ButtonWithLoading>);
-    expect(wrapper.text()).toEqual('---');
+    expect(wrapper.text()).toEqual('로딩중');
     expect(wrapper.find(Button)).toHaveLength(0);
   });
 
