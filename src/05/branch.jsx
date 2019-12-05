@@ -5,7 +5,7 @@ import Button from '../04/Button';
 
 // export default branch(
 //   ({ isLoading }) => isLoading,
-//   (ButtonComponent) => () => <ButtonComponent disabled>로딩중</ButtonComponent>,
+//   () => () => <Button disabled>로딩중</Button>,
 // )(Button);
 
 function isLoading(props) {
@@ -13,10 +13,7 @@ function isLoading(props) {
 }
 
 function LoadingButton(props) {
-  return <Button disabled>로딩중</Button>
+  return <Button disabled>로딩중</Button>;
 }
 
-export default branch(
-  isLoading,
-  () => LoadingButton,
-)(Button);
+export default branch(isLoading, () => LoadingButton)(Button);
