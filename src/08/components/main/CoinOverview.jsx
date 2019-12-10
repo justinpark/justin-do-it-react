@@ -13,6 +13,7 @@ class CoinOverview extends PureComponent {
         <InlineList>
           <CoinDashlet name="비트코인" priceLabel="4,216,000원" />
           <CoinDashlet name="이더리움" priceLabel="216,000원" />
+          <CoinDashlet name="두잇코인" priceLabel="25,000원" />
         </InlineList>
       </React.Fragment>
     );
