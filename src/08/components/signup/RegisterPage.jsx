@@ -5,8 +5,8 @@ import Spacing from '../../../doit-ui/Spacing';
 import Input from '../../../doit-ui/Input';
 import Button from '../../../doit-ui/Button';
 import InlineList from '../../../doit-ui/InlineList';
-import { Modal } from '../../ModalProvider';
 import Form from '../../../doit-ui/Form';
+import { Consumer as Modal } from '../../../doit-ui/Modal/context';
 
 class RegisterPage extends PureComponent {
   constructor(props) {
@@ -17,7 +17,7 @@ class RegisterPage extends PureComponent {
     const { name, createUser } = this.props;
     const formValues = {
       ...values,
-      name
+      name,
     };
     createUser(formValues, closeModal);
   }
@@ -33,19 +33,10 @@ class RegisterPage extends PureComponent {
                     회원 등록
                   </Text>
                   <Spacing bottom={2}>
-                    <Input
-                      name="userId"
-                      label="사용자 아이디"
-                      onChange={onChange}
-                    />
+                    <Input name="userId" label="사용자 아이디" onChange={onChange} />
                   </Spacing>
                   <Spacing bottom={2}>
-                    <Input
-                      name="totalAmount"
-                      type="number"
-                      label="자산 총액"
-                      onChange={onChange}
-                    />
+                    <Input name="totalAmount" type="number" label="자산 총액" onChange={onChange} />
                   </Spacing>
                   <InlineList spacingBetween={1}>
                     <Button primary>회원 등록</Button>
@@ -62,7 +53,7 @@ class RegisterPage extends PureComponent {
 }
 
 RegisterPage.propTypes = {
-  createUser: PropTypes.func
+  createUser: PropTypes.func,
 };
 
 export default RegisterPage;
