@@ -4,6 +4,7 @@ import { showMessage } from './notificationActions';
 export const LOADING_TRANSACTION_LIST = 'transaction/LOADING_TRANSACTION_LIST';
 export const SET_TRANSACTION_LIST = 'transaction/SET_TRANSACTION_LIST';
 export const SET_ERROR = 'transaction/SET_ERROR';
+export const TRADE_COMPLETE = 'transaction/TRADE_COMPLETE';
 
 export function loading() {
   return {
@@ -15,13 +16,13 @@ export function setError(errorMessage) {
   return {
     type: SET_ERROR,
     payload: { errorMessage },
-  }
+  };
 }
 
 export function setTransactionList(transactions) {
   return {
     type: SET_TRANSACTION_LIST,
-    payload: transactions
+    payload: transactions,
   };
 }
 
@@ -35,15 +36,20 @@ export function requestTransactionList(params) {
         // dispatch(showMessage(error.response.data.errorMessage, true));
       },
     );
-  }
+  };
+}
+
+export function tradeComplete() {
+  return { type: TRADE_COMPLETE };
 }
 
 export function createTransaction(data) {
   return dispatch =>
     Api.post('/transactions', data).then(
       ({ data }) => {
-        dispatch(setError('거래 중 문제가 발생하였습니다.'))
-        // dispatch(showMessage('거래가 성공적으로 처리되었습니다.'))
+        dispatch(tradeComplete());
+        // dispatch(setError('거래 중 문제가 발생하였습니다.'))
+        // dispatch(showMessage('거래가 성공적으로 처리되었습니다.'));
       },
       error => dispatch(setError(error)),
     );
