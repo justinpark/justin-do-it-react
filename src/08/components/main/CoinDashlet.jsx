@@ -5,7 +5,7 @@ import Button from '../../../doit-ui/Button';
 import Card from '../../../doit-ui/Card';
 import InlineList from '../../../doit-ui/InlineList';
 import Text from '../../../doit-ui/Text';
-import { Modal } from '../../ModalProvider';
+import { Consumer as Modal } from '../../../doit-ui/Modal/context';
 import { TRADE_COIN_MODAL } from '../../constants/modals';
 
 class CoinDashlet extends PureComponent {
@@ -46,6 +46,6 @@ class CoinDashlet extends PureComponent {
 }
 CoinDashlet.propTypes = {
   name: PropTypes.string,
-  priceLabel: PropTypes.string
+  priceLabel: PropTypes.string,
 };
 export default CoinDashlet;
