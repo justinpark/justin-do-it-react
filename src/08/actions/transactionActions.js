@@ -43,14 +43,13 @@ export function tradeComplete() {
   return { type: TRADE_COMPLETE };
 }
 
-export function createTransaction(data) {
+export function createTransaction(data, onComplete) {
   return dispatch =>
     Api.post('/transactions', data).then(
       ({ data }) => {
         dispatch(tradeComplete());
-        // dispatch(setError('거래 중 문제가 발생하였습니다.'))
-        // dispatch(showMessage('거래가 성공적으로 처리되었습니다.'));
+        onComplete();
       },
-      error => dispatch(setError(error)),
+      error => dispatch(setError(error.response.data.errorMessage)),
     );
 }
