@@ -1,11 +1,9 @@
 // import Api from '../Api';
 import selectorAction from 'selector-action';
-import createActions from '../../10/api-redux-pack/createActions';
+import createActions from '../../11/api-redux-pack/createActions';
 import { paginationSelector } from '../selectors/transactionSelectors';
 
-const { collection, create, reset: resetTransactionList } = createActions(
-  'transactions'
-);
+const { collection, create, reset: resetTransactionList } = createActions('transactions');
 
 export const FETCH_TRANSACTION_LIST = 'transaction/FETCH_TRANSACTION_LIST';
 export const FETCH_TRANSACTION = 'transaction/FETCH_TRANSACTION';
@@ -81,19 +79,19 @@ export function requestTransactionList(_page = 1) {
     pageSize: PAGE_SIZE,
     notification: {
       success: '거래 목록을 최신 정보로 업데이트하였습니다.',
-      error: '거래 목록을 갱신하는 중에 문제가 발생하였습니다.'
-    }
+      error: '거래 목록을 갱신하는 중에 문제가 발생하였습니다.',
+    },
   };
   return selectorAction(
     state => state.searchFilter.params,
-    (params) =>
+    params =>
       collection(
         {
           ...params,
           _page,
-          _limit: PAGE_SIZE
+          _limit: PAGE_SIZE,
         },
-        meta
+        meta,
       ),
   );
 }
@@ -103,8 +101,8 @@ export function requestNextTransactionList() {
     pageSize: PAGE_SIZE,
     notification: {
       success: '거래 목록을 최신 정보로 업데이트하였습니다.',
-      error: '거래 목록을 갱신하는 중에 문제가 발생하였습니다.'
-    }
+      error: '거래 목록을 갱신하는 중에 문제가 발생하였습니다.',
+    },
   };
   return selectorAction(
     state => state.searchFilter.params,
@@ -123,7 +121,6 @@ export function requestNextTransactionList() {
       ),
   );
 }
-
 
 export function createTransaction(data, closeModal) {
   return create(data, {}, { onSuccess: closeModal });

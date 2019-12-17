@@ -1,4 +1,4 @@
-import createActions from '../../10/api-redux-pack/createActions';
+import createActions from '../../11/api-redux-pack/createActions';
 
 const { collection, create } = createActions('transactions');
 const PAGE_SIZE = 10;
@@ -12,11 +12,14 @@ export function requestTransactionList(params, _page = 1) {
       error: '거래 목록을 갱신하는 중에 문제가 발생하였습니다.',
     },
   };
-  return collection({
-    ...params,
-    _page,
-    _limit: PAGE_SIZE,
-  }, meta);
+  return collection(
+    {
+      ...params,
+      _page,
+      _limit: PAGE_SIZE,
+    },
+    meta,
+  );
 }
 
 export function createTransaction(data, closeModal) {

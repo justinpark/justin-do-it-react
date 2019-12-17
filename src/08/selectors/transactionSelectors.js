@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import createSelectors from '../../10/api-redux-pack/createSelectors';
+import createSelectors from '../../11/api-redux-pack/createSelectors';
 
 export const {
   resourceSelector: transactionsSelector,
@@ -51,5 +51,5 @@ export const {
 export const firstPageLoadingSelector = createSelector(
   transactionListLoadingStateSelector,
   paginationSelector,
-  (loading, { number }) => loading && number === 0
+  (loading, { number }) => loading && number === 0,
 );
