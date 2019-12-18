@@ -46,12 +46,15 @@ export const CREATE_TRANSACTION = 'transaction/CREATE_TRANSACTION';
 //   };
 // }
 
-// export function createTransaction(data, closeModal) {
+// export function createTransaction(data, onComplete) {
 //   return {
 //     type: CREATE_TRANSACTION,
 //     promise: Api.post('/transactions', data),
 //     meta: {
-//       onSuccess: closeModal,
+//       onSuccess: onComplete,
+//       notification: {
+//         success: '거래가 성공적으로 완료되었습니다',
+//       },
 //     },
 //   };
 // }
@@ -122,7 +125,7 @@ export function requestNextTransactionList() {
   );
 }
 
-export function createTransaction(data, closeModal) {
-  return create(data, {}, { onSuccess: closeModal });
+export function createTransaction(data, onComplete) {
+  return create(data, {}, { onSuccess: onComplete });
 }
 export { resetTransactionList };

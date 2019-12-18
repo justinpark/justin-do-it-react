@@ -1,14 +1,14 @@
 import {
   SET_TRANSACTION_LIST,
   LOADING_TRANSACTION_LIST,
-  SET_ERROR
+  SET_ERROR,
 } from '../actions/transactionActions';
 import { handle } from 'redux-pack';
 import {
   CREATE_TRANSACTION,
   UPDATE_TRANSACTION,
   FETCH_TRANSACTION,
-  FETCH_TRANSACTION_LIST
+  FETCH_TRANSACTION_LIST,
 } from '../actions/transactionPackActions';
 
 const initState = {
@@ -27,7 +27,6 @@ const initState = {
     [FETCH_TRANSACTION_LIST]: false,
   },
   pagination: {},
-  pages: {}
 };
 
 export default (state = initState, action) => {
@@ -39,14 +38,14 @@ export default (state = initState, action) => {
         ...state,
         loading: false,
         hasError: true,
-        errorMessage
+        errorMessage,
       };
     }
     case LOADING_TRANSACTION_LIST: {
       return {
         ...state,
         loading: true,
-        hasError: false
+        hasError: false,
       };
     }
     case SET_TRANSACTION_LIST: {
@@ -54,16 +53,16 @@ export default (state = initState, action) => {
       const entities = payload.reduce(
         (finalEntities, entity) => ({
           ...finalEntities,
-          [entity['id']]: entity
+          [entity['id']]: entity,
         }),
-        {}
+        {},
       );
       return {
         ...state,
         ids,
         entities,
         loading: false,
-        hasError: false
+        hasError: false,
       };
     }
     case CREATE_TRANSACTION:
@@ -102,9 +101,9 @@ export default (state = initState, action) => {
             const entities = data.reduce(
               (finalEntities, entity) => ({
                 ...finalEntities,
-                [entity['id']]: entity
+                [entity['id']]: entity,
               }),
-              {}
+              {},
             );
             return {
               ...prevState,
@@ -113,12 +112,8 @@ export default (state = initState, action) => {
               entities: { ...prevState.entities, ...entities },
               pagination: {
                 number: pageNumber,
-                size: pageSize
+                size: pageSize,
               },
-              pages: {
-                ...prevState.pages,
-                [pageNumber]: ids
-              }
             };
           } else {
             const id = data['id'];
@@ -144,7 +139,7 @@ export default (state = initState, action) => {
               [type]: errorMessage || true,
             },
           };
-        }
+        },
       });
     }
     default:

@@ -23,7 +23,7 @@ class TradeCoinPage extends PureComponent {
     createTransaction(formValues, closeModal);
   }
   render() {
-    const { name, price, type } = this.props;
+    const { name, price, type, loading } = this.props;
     const typeName = type === 'sell' ? '판매' : '구매';
     return (
       <Modal>
@@ -55,8 +55,12 @@ class TradeCoinPage extends PureComponent {
                     />
                   </Spacing>
                   <InlineList spacingBetween={1}>
-                    <Button primary>{typeName}</Button>
-                    <Button onPress={closeModal}>취소</Button>
+                    <Button primary disabled={loading}>
+                      {loading ? '거래 처리중' : typeName}
+                    </Button>
+                    <Button onPress={closeModal} disabled={loading}>
+                      취소
+                    </Button>
                   </InlineList>
                 </Spacing>
               )}

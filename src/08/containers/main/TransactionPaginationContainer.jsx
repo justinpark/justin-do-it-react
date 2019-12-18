@@ -1,22 +1,24 @@
 import { connect } from 'react-redux';
 import TransactionPagination from '../../components/main/TransactionPagination';
-import { requestTransactionList, requestNextTransactionList } from '../../actions/transactionPackActions';
+import { requestTransactionList } from '../../actions/transactionPackActions';
 import {
   paginationSelector,
   transactionListLoadingStateSelector,
 } from '../../selectors/transactionSelectors';
 
-const mapStateToProps = state => ({
-  // params: state.searchFilter.params,
-  loading: transactionListLoadingStateSelector(state),
-  // pageNumber: paginationSelector(state).number || 1,
-});
+const mapStateToProps = state => {
+  const { pagination, loading, ids } = state.transactions;
+  const { number, size } = pagination;
+
+  return {
+    // params: state.searchFilter.params,
+    hasNext: ids.length === size,
+    loading: transactionListLoadingStateSelector(state),
+    pageNumber: paginationSelector(state).number || 1,
+  };
+};
 const mapDispatchToProps = {
-  // requestTransactionList
-  requestNextTransactionList,
+  requestTransactionList,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TransactionPagination);
+export default connect(mapStateToProps, mapDispatchToProps)(TransactionPagination);

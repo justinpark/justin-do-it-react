@@ -22,11 +22,13 @@ export const {
 // export const transactionPagesSelector = state =>
 //   transactionsSelector(state).pages;
 // export const transactionListSelector = createSelector(
-//   transactionEntitiesSelector,
-//   transactionPagesSelector,
-//   (entities, pages) =>
-//     [].concat(...Object.values(pages)).map(id => entities[id])
+//   [transactionsSelector],
+//   transactions => {
+//     const { entities, ids } = transactions;
+//     return ids.map(id => entities[id]);
+//   }
 // );
+
 // export const loadingStateSelector = state =>
 //   transactionsSelector(state).loadingState;
 // export const errorStateSelector = state =>
