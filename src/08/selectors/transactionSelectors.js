@@ -50,8 +50,8 @@ export const {
 //     };
 //   }
 // );
-export const firstPageLoadingSelector = createSelector(
-  transactionListLoadingStateSelector,
-  paginationSelector,
-  (loading, { number }) => loading && number === 0,
-);
+// export const firstPageLoadingSelector = createSelector(
+//   transactionListLoadingStateSelector,
+//   paginationSelector,
+//   (loading, { number }) => loading && number === 0,
+// );

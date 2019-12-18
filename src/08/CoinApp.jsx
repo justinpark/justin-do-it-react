@@ -13,8 +13,8 @@ import ModalProvider from './ModalProvider';
 import NotificationContainer from './containers/NotificationContainer';
 // import RegisterPageContainer from './containers/signup/RegisterPageContainer';
 import RouterStateContainer from './containers/RouterStateContainer';
-import RegisterPageContainer from '../11/AsyncRegisterPage';
-import MainPage from '../11/AsyncMainPage';
+import RegisterPageContainer from '../12/AsyncRegisterPage';
+import MainPage from '../12/AsyncMainPage';
 
 class CoinApp extends PureComponent {
   store = configureStore();

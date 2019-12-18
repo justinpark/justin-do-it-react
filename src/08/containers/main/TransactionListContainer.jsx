@@ -6,7 +6,6 @@ import { requestTransactionList } from '../../actions/transactionPackActions';
 import {
   transactionListSelector,
   transactionListLoadingStateSelector,
-  firstPageLoadingSelector,
 } from '../../selectors/transactionSelectors';
 
 // const mapStateToProps = state => {
@@ -21,14 +20,11 @@ import {
 
 const mapStateToProps = state => ({
   transactions: transactionListSelector(state),
-  loading: firstPageLoadingSelector(state),
+  loading: transactionListLoadingStateSelector(state),
 });
 
 const mapDispatchToProps = {
-  requestTransactionList
+  requestTransactionList,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(TransactionList);
+export default connect(mapStateToProps, mapDispatchToProps)(TransactionList);

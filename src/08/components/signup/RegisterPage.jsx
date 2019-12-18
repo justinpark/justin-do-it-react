@@ -22,6 +22,7 @@ class RegisterPage extends PureComponent {
     createUser(formValues, closeModal);
   }
   render() {
+    const { loading } = this.props;
     return (
       <Modal>
         {({ closeModal }) => (
@@ -39,8 +40,12 @@ class RegisterPage extends PureComponent {
                     <Input name="totalAmount" type="number" label="자산 총액" onChange={onChange} />
                   </Spacing>
                   <InlineList spacingBetween={1}>
-                    <Button primary>회원 등록</Button>
-                    <Button onPress={closeModal}>취소</Button>
+                    <Button type="submit" primary disabled={loading}>
+                      회원 등록
+                    </Button>
+                    <Button onPress={closeModal} disabled={loading}>
+                      취소
+                    </Button>
                   </InlineList>
                 </Spacing>
               )}

@@ -126,6 +126,13 @@ export function requestNextTransactionList() {
 }
 
 export function createTransaction(data, onComplete) {
-  return create(data, {}, { onSuccess: onComplete });
+  const meta = {
+    onSuccess: onComplete,
+    notification: {
+      success: '거래가 성공적으로 완료되었습니다',
+    },
+  };
+
+  return create(data, {}, meta);
 }
 export { resetTransactionList };

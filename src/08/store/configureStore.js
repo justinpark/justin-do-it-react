@@ -5,7 +5,7 @@ import { SET_TRANSACTION_LIST } from '../actions/transactionActions';
 import thunk from 'redux-thunk';
 import { middleware as reduxPackMiddleware } from 'redux-pack';
 import searchFilterEffects from '../middlewares/searchFilterEffects';
-import searchRouterEffects from '../middlewares/searchRouterEffects';
+import routerEffects from '../middlewares/routerEffects';
 import notificationEffects from '../middlewares/notificationEffects';
 const customMiddleware = store => nextRunner => action => {
   console.log('미들웨어에 전달된 액션 객체', action);
@@ -66,7 +66,7 @@ export default initStates =>
         reduxPackMiddleware,
         searchFilterEffects,
         notificationEffects,
-        searchRouterEffects,
+        routerEffects,
       ),
       // applyMiddleware(notificationEffects),
       // applyMiddleware(customMiddleware, customMiddleware2),

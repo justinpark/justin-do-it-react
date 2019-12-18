@@ -18,11 +18,13 @@ class TransactionSearchFilter extends PureComponent {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit(params) {
+    // const { requestTransactionList, setFilter } = this.props;
     const { setFilter, history } = this.props;
     const cleanedParams = Object.entries(params)
       .filter(entries => entries[1] !== '')
       .reduce((obj, [key, value]) => ({ ...obj, [key]: value }), {});
-    // setFilter(cleanedParams);
+    // requestTransactionList(cleanedParams);
+    setFilter(cleanedParams);
     const querystring = Object.entries(params)
       .filter(entries => !!entries[1])
       .map(([key, value]) => `${key}=${value}`)
@@ -42,12 +44,7 @@ class TransactionSearchFilter extends PureComponent {
               <Text xlarge bold>
                 검색
               </Text>
-              <Select
-                name="code"
-                label="코인 코드"
-                onChange={onChange}
-                value={values['code']}
-              >
+              <Select name="code" label="코인 코드" onChange={onChange} value={values['code']}>
                 <Option label="선택해주세요" value="" />
                 <Option label="비트코인(BTX)" value="BTX" />
                 <Option label="이더리움(ETH)" value="ETH" />
