@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { withStyles, css, withStylesPropTypes } from '../../doit-ui/withStyles';
-// import { Link } from 'react-router-dom';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
+// import Link from 'next/link';
 import Heading from '../../doit-ui/Heading';
 // import Text from '../../doit-ui/Text';
 import Button from '../../doit-ui/Button';
@@ -17,18 +17,15 @@ class AppNav extends PureComponent {
       <div {...css(styles.wrapper)}>
         <div {...css(styles.container)}>
           <Heading level={3} inverse>
-            <Link href="/">두잇 코인 거래소</Link>
+            두잇 코인 거래소
           </Heading>
-          <Link href="/register">회원가입</Link>
-          {false && (
-            <Modal>
-              {({ openModal }) => (
-                <Button inverse bold large onPress={() => openModal(REGISTER_USER_MODAL)}>
-                  회원 가입
-                </Button>
-              )}
-            </Modal>
-          )}
+          <Modal>
+            {({ openModal }) => (
+              <Button inverse bold large onPress={() => openModal(REGISTER_USER_MODAL)}>
+                회원 가입
+              </Button>
+            )}
+          </Modal>
         </div>
       </div>
     );

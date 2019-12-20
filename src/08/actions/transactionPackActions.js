@@ -3,8 +3,9 @@ import selectorAction from 'selector-action';
 import createActions from '../../11/api-redux-pack/createActions';
 import { paginationSelector } from '../selectors/transactionSelectors';
 
-const { collection, create, reset: resetTransactionList } = createActions('transactions');
+const { collection, create, reset } = createActions('transactions');
 
+export const resetTransactionList = reset;
 export const FETCH_TRANSACTION_LIST = 'transaction/FETCH_TRANSACTION_LIST';
 export const FETCH_TRANSACTION = 'transaction/FETCH_TRANSACTION';
 export const UPDATE_TRANSACTION = 'transaction/UPDATE_TRANSACTION';
@@ -135,4 +136,3 @@ export function createTransaction(data, onComplete) {
 
   return create(data, {}, meta);
 }
-export { resetTransactionList };

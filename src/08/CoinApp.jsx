@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import AppLayout from './components/AppLayout';
-// import MainPage from './components/main/MainPage';
+import MainPage from './components/main/MainPage';
 import NotFound from './components/NotFound';
 // import CoinOverview from './components/main/CoinOverview';
 // import TransactionListContainer from './containers/main/TransactionListContainer';
@@ -13,8 +13,7 @@ import ModalProvider from './ModalProvider';
 import NotificationContainer from './containers/NotificationContainer';
 // import RegisterPageContainer from './containers/signup/RegisterPageContainer';
 import RouterStateContainer from './containers/RouterStateContainer';
-import RegisterPageContainer from '../12/AsyncRegisterPage';
-import MainPage from '../12/AsyncMainPage';
+// import MainPage from '../13/AsyncMainPage';
 
 class CoinApp extends PureComponent {
   store = configureStore();
@@ -28,7 +27,6 @@ class CoinApp extends PureComponent {
             <AppLayout>
               <Switch>
                 <Route path="/" exact render={() => <MainPage />} />
-                <Route path="/register" exact render={() => <RegisterPageContainer />} />
                 <Route path="*" component={NotFound} />
               </Switch>
               <NotificationContainer />
