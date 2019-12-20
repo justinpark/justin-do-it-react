@@ -1,5 +1,4 @@
 // import Api from '../Api';
-import selectorAction from 'selector-action';
 import createActions from '../../11/api-redux-pack/createActions';
 import { paginationSelector } from '../selectors/transactionSelectors';
 
@@ -61,68 +60,22 @@ export const CREATE_TRANSACTION = 'transaction/CREATE_TRANSACTION';
 // }
 
 const PAGE_SIZE = 10;
-// export function requestTransactionList(params, _page = 1) {
-//   const meta = {
-//     pageNumber: _page,
-//     pageSize: PAGE_SIZE,
-//     notification: {
-//       success: '거래 목록을 최신 정보로 업데이트하였습니다.',
-//       error: '거래 목록을 갱신하는 중에 문제가 발생하였습니다.',
-//     },
-//   };
-//   return collection({
-//     ...params,
-//     _page,
-//     _limit: PAGE_SIZE,
-//   }, meta);
-// }
-
-export function requestTransactionList(_page = 1) {
+export function requestTransactionList(params, _page = 1) {
   const meta = {
     pageNumber: _page,
     pageSize: PAGE_SIZE,
     notification: {
-      success: '거래 목록을 최신 정보로 업데이트하였습니다.',
+      // success: '거래 목록을 최신 정보로 업데이트하였습니다.',
       error: '거래 목록을 갱신하는 중에 문제가 발생하였습니다.',
     },
   };
-  return selectorAction(
-    state => state.searchFilter.params,
-    params =>
-      collection(
-        {
-          ...params,
-          _page,
-          _limit: PAGE_SIZE,
-        },
-        meta,
-      ),
-  );
-}
-
-export function requestNextTransactionList() {
-  const meta = {
-    pageSize: PAGE_SIZE,
-    notification: {
-      success: '거래 목록을 최신 정보로 업데이트하였습니다.',
-      error: '거래 목록을 갱신하는 중에 문제가 발생하였습니다.',
+  return collection(
+    {
+      ...params,
+      _page,
+      _limit: PAGE_SIZE,
     },
-  };
-  return selectorAction(
-    state => state.searchFilter.params,
-    paginationSelector,
-    (params, pagination) =>
-      collection(
-        {
-          ...params,
-          _page: pagination.number + 1,
-          _limit: PAGE_SIZE,
-        },
-        {
-          ...meta,
-          pageNumber: pagination.number + 1,
-        },
-      ),
+    meta,
   );
 }
 

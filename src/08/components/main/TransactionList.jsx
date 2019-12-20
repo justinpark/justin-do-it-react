@@ -24,13 +24,13 @@ class TransactionList extends PureComponent {
 
   componentDidMount() {
     // Api.get('/transactions', { params: { code: 'BTX' } })
-      // .then(({ data }) => this.setState({ transactions: data }))
+    // .then(({ data }) => this.setState({ transactions: data }))
     // fetch('http://localhost:4000/transactions')
     //   .then(response => response.json())
-      // .then(transactions => this.props.setTransactionList(transactions));
-      // .then(({ data }) => this.setState({ transactions: data }));
+    // .then(transactions => this.props.setTransactionList(transactions));
+    // .then(({ data }) => this.setState({ transactions: data }));
     // Api.get('/transactions').then(({ data }) => this.props.setTransactionList(data));
-    this.props.requestTransactionList();
+    // this.props.requestTransactionList();
   }
 
   render() {

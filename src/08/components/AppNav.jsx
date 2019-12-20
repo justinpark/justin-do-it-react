@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
 import { withStyles, css, withStylesPropTypes } from '../../doit-ui/withStyles';
-import { Link } from 'react-router-dom';
-// import Link from 'next/link';
 import Heading from '../../doit-ui/Heading';
 // import Text from '../../doit-ui/Text';
 import Button from '../../doit-ui/Button';

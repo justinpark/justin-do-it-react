@@ -11,7 +11,7 @@ const mapStateToProps = state => {
   const { number, size } = pagination;
 
   return {
-    // params: state.searchFilter.params,
+    searchParams: state.searchFilter.params,
     hasNext: ids.length === size,
     loading: transactionListLoadingStateSelector(state),
     pageNumber: paginationSelector(state).number || 1,
