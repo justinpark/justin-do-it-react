@@ -3,4 +3,9 @@ import RegisterPage from '../../components/signup/RegisterPage';
 import { createUser } from '../../actions/userActions';
 import { userCreateLoadingStateSelector } from '../../selectors/userSelectors';
 
-export default connect({ loading: userCreateLoadingStateSelector }, { createUser })(RegisterPage);
+export default connect(
+  state => ({
+    loading: userCreateLoadingStateSelector(state),
+  }),
+  { createUser },
+)(RegisterPage);
