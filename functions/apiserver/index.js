@@ -23,20 +23,25 @@ app.post('/transactions', (req, res) => {
     totalPrice: currentPrice * amount,
     datetime: admin.firestore.FieldValue.serverTimestamp(),
   };
-  db.collection('transactions').add(data).then(doc => {
-    db.collection('transactions').doc(doc.id).get().then(doc => {
-      if (doc.exists) {
-        res.status(200).send(doc.data());
-      } else {
-        res.status(404).send({
-          errorCode: 404,
-          errorMessage: '자료가 존재하지 않습니다'
+  db.collection('transactions')
+    .add(data)
+    .then(doc => {
+      db.collection('transactions')
+        .doc(doc.id)
+        .get()
+        .then(doc => {
+          if (doc.exists) {
+            res.status(200).send(doc.data());
+          } else {
+            res.status(404).send({
+              errorCode: 404,
+              errorMessage: '자료가 존재하지 않습니다',
+            });
+          }
         });
-      }
     });
-  });
 });
-app.get(`/transactions/:id`, (req, res) => {
+app.get('/transactions/:id', (req, res) => {
   db.collection('transactions')
     .doc(req.params.id)
     .get()
@@ -46,24 +51,24 @@ app.get(`/transactions/:id`, (req, res) => {
       } else {
         res.status(404).send({
           errorCode: 404,
-          errorMessage: '자료가 존재하지 않습니다'
+          errorMessage: '자료가 존재하지 않습니다',
         });
       }
     });
 });
-app.get(`/transactions`, (req, res) => {
+app.get('/transactions', (req, res) => {
   const { code, currentPrice_gte, currentPrice_lte, _page, _limit } = [
     'code',
     'currentPrice_gte',
     'currentPrice_lte',
     '_page',
-    '_limit'
+    '_limit',
   ].reduce(
     (qs, name) => ({
       ...qs,
       [name]: name === 'code' ? req.query[name] : parseInt(req.query[name]),
     }),
-    {}
+    {},
   );
   const page = _page || 1;
   let collection = db.collection('transactions');
@@ -96,7 +101,7 @@ app.get(`/transactions`, (req, res) => {
         Object.assign(result, {
           id: doc.id,
           datetime: formattedDatetime,
-        })
+        }),
       );
     });
     res.status(200).send(data.slice(_limit * (page - 1)));

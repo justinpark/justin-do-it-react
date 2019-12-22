@@ -34,10 +34,7 @@ body {
   background-color: #eeeeee;
 }
           `}</style>
-          <style
-            data-aphrodite
-            dangerouslySetInnerHTML={{ __html: this.props.css.content }}
-          />
+          <style data-aphrodite dangerouslySetInnerHTML={{ __html: this.props.css.content }} />
         </Head>
         <body>
           <Main />

@@ -9,9 +9,7 @@ class AppLayout extends PureComponent {
     return (
       <div {...css(styles.wrapper)}>
         <AppNav />
-        <div {...css(styles.body)}>
-          {children}
-        </div>
+        <div {...css(styles.body)}>{children}</div>
       </div>
     );
   }
