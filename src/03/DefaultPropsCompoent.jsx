@@ -9,13 +9,13 @@ class DefaultPropsComponent extends React.Component {
     }
     let message2 = '';
     if (this.props.boolValueWithoutDefault === false) {
-      message1 = 'boolValueWithoutDefault 기본값이 false입니다';
+      message2 = 'boolValueWithoutDefault 기본값이 false입니다';
     }
     return (
-     <div className="message-container">
-       {message1}
-       {message2}
-     </div>
+      <div className="message-container">
+        {message1}
+        {message2}
+      </div>
     );
   }
 }
