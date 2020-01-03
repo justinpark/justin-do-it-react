@@ -1,5 +1,5 @@
 // ES5 문법
-function Shape (x, y) {
+function Shape(x, y) {
   this.name = 'Shape';
   this.move(x, y);
 }
@@ -10,20 +10,20 @@ Shape.create = function(x, y) {
 Shape.prototype.move = function(x, y) {
   this.x = x;
   this.y = y;
-}
+};
 Shape.prototype.area = function() {
   return 0;
 };
 
 // 혹은
 Shape.prototype = {
-  move: function (x, y) {
+  move: function(x, y) {
     this.x = x;
     this.y = y;
   },
-  area: function () {
+  area: function() {
     return 0;
-  }
+  },
 };
 
 var s = new Shape(0, 0);
@@ -38,12 +38,11 @@ function Circle(x, y, radius) {
 Object.assign(Circle.prototype, Shape.prototype, {
   area: function() {
     return this.radius * this.radius;
-  }
+  },
 });
 
 var c = new Circle(0, 0, 10);
 c.area(); // 100
-
 
 // ES6 예제
 class Shape {
@@ -52,12 +51,12 @@ class Shape {
   }
   name = 'Shape';
 
-  constructor (x, y) {
+  constructor(x, y) {
     this.move(x, y);
   }
   move(x, y) {
-    this.x = x
-    this.y = y
+    this.x = x;
+    this.y = y;
   }
   area() {
     return 0;
