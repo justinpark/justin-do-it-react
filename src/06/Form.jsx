@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Provider } from './FormContext';
 
-export default class FormProvider extends React.PureComponent {
+class FormProvider extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -73,6 +73,7 @@ FormProvider.defaultProps = {
   validate: () => ({}),
 };
 
+export default FormProvider;
 /*
 const validate = (values) => {
   const errors = {};
