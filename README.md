@@ -1,7 +1,8 @@
 ## [두잇!]리액트 프로그래밍 정석
 
 ![두잇 리액트 표지](https://raw.githubusercontent.com/justinpark/justin-do-it-react/master/do-it-react-cover.jpeg?size=300)
-여기 코드는 두잇! 리액트 프로그래밍 정석의 예제 및 연습문제 소스를 포함하고 있습니다.
+
+_여기 코드는 두잇! 리액트 프로그래밍 정석의 예제 및 연습문제 소스를 포함하고 있습니다._
 
 ### 작동 데모 주소
 
