@@ -32,7 +32,7 @@ export default withStyles(({ depth, unit, color }) => ({
   overlay: {
     position: 'fixed',
     bottom: 0,
-    right: 0,
+    left: 0,
     margin: unit * 4,
   },
   wrapper: {
