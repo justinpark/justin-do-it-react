@@ -7,7 +7,9 @@ _여기 코드는 두잇! 리액트 프로그래밍 정석의 예제 및 연습�
 ## 책 오류 수정
 
 - p.43 예제 코드 6번 항목
+
   ~~var args = Array.prototype.slice.call(this, arguments);~~
+
   var args = Array.prototype.slice.call(arguments);
 
 ## 작동 데모 주소
