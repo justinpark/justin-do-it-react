@@ -4,9 +4,15 @@
 
 _여기 코드는 두잇! 리액트 프로그래밍 정석의 예제 및 연습문제 소스를 포함하고 있습니다._
 
+## 책 오류 수정
+
+- p.43 예제 코드 6번 항목
+  ~~var args = Array.prototype.slice.call(this, arguments);~~
+  var args = Array.prototype.slice.call(arguments);
+
 ## 작동 데모 주소
 
-https://justin-do-it-react.firebaseapp.com/
+- https://justin-do-it-react.firebaseapp.com/
 
 ## 목차
 
@@ -116,7 +122,8 @@ https://justin-do-it-react.firebaseapp.com/
 - 12-2 리액트 라우터 구성하기
 - 12-3 주소와 리덕스 연결하기
 
-#### 에어비앤비 개발자의 비밀 
+#### 에어비앤비 개발자의 비밀
+
 - 코드 스프릿팅 기법으로 bundle.js크기 줄이기
 - 파이어베이스에 가상 코인 거래소 빼포하기
 - 서버 사이드 랜더링 도입하기
