@@ -16,6 +16,12 @@ https://justin-do-it-react.firebaseapp.com/
 
   var args = Array.prototype.slice.call(arguments);
 
+- p.44 예제 코드 7번 항목
+
+  ~~func(...args) { var [first, ...others] = args; }~~
+
+  _function_ func(...args) { var [first, ...others] = args; }
+
 ## 목차
 
 ### 첫째마당. 리액트 기본 익히기

@@ -21,6 +21,11 @@ var combined = [...array1, ...array2];
 // combined = ['one', 'two', 'three', 'four'];
 var [first, second, three = 'empty', ...others] = array1;
 // first = 'one', second = 'two', three = 'empty', others = []
+
+function func(...args) {
+  var [first, ...others] = args;
+}
+
 function func(first, ...others) {
   var firstInES6 = first;
   var othersInES6 = others;
