@@ -20,7 +20,7 @@ https://justin-do-it-react.firebaseapp.com/
 
   ~~func(...args) { var [first, ...others] = args; }~~
 
-  _function_ func(...args) { var [first, ...others] = args; }
+  **function** func(...args) { var [first, ...others] = args; }
 
 ## 목차
 
