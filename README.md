@@ -22,6 +22,9 @@ https://justin-do-it-react.firebaseapp.com/
 
   **function** func(...args) { var [first, ...others] = args; }
 
+- p.431
+  `import * as serviceWorker from './serviceWorker';` 강조 색상 삭제
+
 ## 목차
 
 ### 첫째마당. 리액트 기본 익히기
