@@ -10,6 +10,21 @@ https://justin-do-it-react.firebaseapp.com/
 
 ## 책 오류 수정
 
+- p.27 nvm으로 노드제이에스 설치하기
+  현재 현업에서 가장 많이 사용하는 노드제이에스의 버전이 ~~8~~ 10이기 때문입니다.
+
+  ~~nvm install 8.10.0~~
+
+  `nvm install 10.10.0`
+
+  ~~nvm use 8.10.0~~
+
+```
+nvm use 10.10.0
+> node -v
+10.10.0
+```
+
 - p.43 예제 코드 6번 항목
 
   ~~var args = Array.prototype.slice.call(this, arguments);~~
@@ -21,6 +36,26 @@ https://justin-do-it-react.firebaseapp.com/
   ~~func(...args) { var [first, ...others] = args; }~~
 
   **function** func(...args) { var [first, ...others] = args; }
+
+- p.200 테스트 코드 실행
+  ~~./src/App.test.js 파일을 삭제한 다음 실행하세요.~~
+
+  _(App.test.js파일을 삭제하지 말고 실행하세요.)_
+
+- p.201 <Input> 테스트 코드
+  expect 예제 한줄 추가
+
+```
+    ...
+    ReactDOM.unmountComponentAtNode(div);
+    expect(React.isValidElement(<Input />)).toBeTruthy();
+```
+
+```
+    ...
+    ReactDOM.unmountComponentAtNode(div);
+    expect(React.isValidElement(<Input name="test_name" />)).toBeTruthy();
+```
 
 - p.431
   `import * as serviceWorker from './serviceWorker';` 강조 색상 삭제
