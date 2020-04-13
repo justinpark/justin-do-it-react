@@ -37,6 +37,19 @@ nvm use 10.10.0
 
   **function** func(...args) { var [first, ...others] = args; }
 
+- p.112 정답 코드
+  ~~this.setState((count) => {
+  ~~ count: count + 1;
+  ~~});
+
+  - 중괄호{} 앞뒤로 괄호()가 포함되어야 합니다.
+
+```
+  this.setState((count) => ({
+    count: count + 1;
+  }));
+```
+
 - p.200 테스트 코드 실행
   ~~./src/App.test.js 파일을 삭제한 다음 실행하세요.~~
 
