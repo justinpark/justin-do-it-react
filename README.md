@@ -50,6 +50,25 @@ nvm use 10.10.0
 
 참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/03/Counter.jsx#L13
 
+- p.143 예제 코드
+
+  - constructor에 정의된 window.addEventListener(...) 구문을 componentDidMount 함수 안으로 옮기셔야 초기 스크롤 시 undefined 오류가 발생하지 않습니다.
+
+```
+  constructor(props) {
+    super(props);
+    this.setRef = this.setRef.bind(this);
+    this.checkPosition = this.checkPosition.bind(this);
+  }
+
+  // ...
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.checkPosition);
+    this.checkPosition();
+  }
+```
+
 - p.200 테스트 코드 실행
   ~~./src/App.test.js 파일을 삭제한 다음 실행하세요.~~
 
