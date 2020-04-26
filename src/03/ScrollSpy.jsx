@@ -12,6 +12,10 @@ export default class ScrollSpy extends React.PureComponent {
   }
 
   checkPosition() {
+    if (!this.ref) {
+      return;
+    }
+
     if (this.ref.getBoundingClientRect().top < window.innerHeight) {
       console.log('enter');
     } else {
@@ -28,6 +32,6 @@ export default class ScrollSpy extends React.PureComponent {
   }
 
   render() {
-    return <div ref={this.setRef} />
+    return <div ref={this.setRef} />;
   }
 }
