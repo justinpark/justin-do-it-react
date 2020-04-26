@@ -38,15 +38,13 @@ nvm use 10.10.0
   **function** func(...args) { var [first, ...others] = args; }
 
 - p.112 정답 코드
-  ~~this.setState((count) => {
-  ~~ count: count + 1;
-  ~~});
+  ~~this.setState((count) => { count: count + 1; });
 
   - 중괄호{} 앞뒤로 괄호()가 포함되어야 합니다. 또한 인자 count 양쪽으로 중괄호{}를 포함하여 객체 추출식으로 state값 중 count값을 추출해야합니다.
 
 ```
   this.setState(({ count }) => ({
-    count: count + 1;
+    count: count + 1,
   }));
 ```
 
