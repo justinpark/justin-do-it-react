@@ -42,13 +42,15 @@ nvm use 10.10.0
   ~~ count: count + 1;
   ~~});
 
-  - 중괄호{} 앞뒤로 괄호()가 포함되어야 합니다.
+  - 중괄호{} 앞뒤로 괄호()가 포함되어야 합니다. 또한 인자 count 양쪽으로 중괄호{}를 포함하여 객체 추출식으로 state값 중 count값을 추출해야합니다.
 
 ```
-  this.setState((count) => ({
+  this.setState(({ count }) => ({
     count: count + 1;
   }));
 ```
+
+참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/03/Counter.jsx#L13
 
 - p.200 테스트 코드 실행
   ~~./src/App.test.js 파일을 삭제한 다음 실행하세요.~~
