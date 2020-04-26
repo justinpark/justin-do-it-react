@@ -5,7 +5,6 @@ export default class ScrollSpy extends React.PureComponent {
     super(props);
     this.setRef = this.setRef.bind(this);
     this.checkPosition = this.checkPosition.bind(this);
-    window.addEventListener('scroll', this.checkPosition);
   }
   setRef(ref) {
     this.ref = ref;
@@ -24,6 +23,7 @@ export default class ScrollSpy extends React.PureComponent {
   }
 
   componentDidMount() {
+    window.addEventListener('scroll', this.checkPosition);
     this.checkPosition();
   }
 
