@@ -50,7 +50,7 @@ nvm use 10.10.0
 
 참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/03/Counter.jsx#L13
 
-- p.143 예제 코드
+- p.146 예제 코드
 
   - constructor에 정의된 window.addEventListener(...) 구문을 componentDidMount 함수 안으로 옮기셔야 초기 스크롤 시 undefined 오류가 발생하지 않습니다.
 
