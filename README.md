@@ -89,6 +89,24 @@ nvm use 10.10.0
     expect(React.isValidElement(<Input name="test_name" />)).toBeTruthy();
 ```
 
+- p. 221 예제코드
+  참조 파일 경로에 오타가 있습니다.
+
+  ~~~./src/tests/04/CheckoutBox_spec.jsx~~~
+
+  `./src/__tests__/04/CheckoutBox_spec.jsx`
+
+- p. 317 예제코드
+  </Consumer>위쪽의 두개의 중괄호`}}` 중 앞쪽 괄호는 일반 괄호로 변경`)}`해야 합니다.
+
+```
+  <Consumer>
+    {({ openModal }) => (
+      <Button onPress={openModal} />
+    )}
+  </Consumer>
+```
+
 - p.431
   `import * as serviceWorker from './serviceWorker';` 강조 색상 삭제
 
