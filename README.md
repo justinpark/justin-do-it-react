@@ -92,7 +92,7 @@ nvm use 10.10.0
 - p. 221 예제코드
   참조 파일 경로에 오타가 있습니다.
 
-  ~~~./src/tests/04/CheckoutBox_spec.jsx~~~
+  ~~./src/tests/04/CheckoutBox_spec.jsx~~
 
   `./src/__tests__/04/CheckoutBox_spec.jsx`
 
