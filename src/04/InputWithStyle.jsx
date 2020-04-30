@@ -10,7 +10,7 @@ class Input extends PureComponent {
   handleChange(e) {
     const { name, onChange } = this.props;
     if (onChange) {
-      onChange(name, e.target.value)
+      onChange(name, e.target.value);
     }
   }
   componentDidMount() {
@@ -36,7 +36,11 @@ class Input extends PureComponent {
         <label className="active" htmlFor={`input_${name}`}>
           {label}
         </label>
-        {errorMessage && <span className="helper-text" data-error={errorMessage}>{errorMessage}</span>}
+        {errorMessage && (
+          <span className="helper-text" data-error={errorMessage}>
+            {errorMessage}
+          </span>
+        )}
       </div>
     );
   }
@@ -52,6 +56,7 @@ Input.propTypes = {
   autoFocus: PropTypes.bool,
 };
 Input.defaultProps = {
+  type: 'text',
   onChange: () => {},
   autoFocus: false,
 };
