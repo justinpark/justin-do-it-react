@@ -96,6 +96,13 @@ nvm use 10.10.0
 
   `./src/__tests__/04/CheckoutBox_spec.jsx`
 
+- p. 248 아래쪽 예제코드
+  WrappedComponent 옆의 전개 연산자 변수가 prop이 아닌 otherProps 으로 변경해야합니다.
+
+  ~~<WrappedComponent {...props} />~~
+
+  `<WrappedComponent {...otherProps} />`
+
 - p. 317 예제코드
   </Consumer>위쪽의 두개의 중괄호`}}` 중 앞쪽 괄호는 일반 괄호로 변경`)}`해야 합니다.
 
