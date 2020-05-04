@@ -103,6 +103,40 @@ nvm use 10.10.0
 
   `<WrappedComponent {...otherProps} />`
 
+- p. 273 예제코드
+  주석 1번 ButtonWithContext는 지면 부족으로 코드가 누락되었습니다.
+  다음 참조 파일을 참조하여 추가해주세요.
+
+  참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/06/ButtonWithContext.jsx
+
+- p. 279 예제코드
+  Button 임포트 부분 추가
+
+  ```
+import ButtonWithLoadingContext from './ButtonWithLoadingContext';
+import Button from '../04/Button';
+  ```
+
+  function TableComponent() 아래에 중복 선언된 TableComponent부분 삭제
+
+  ~~const TableComponent = () => <ButtonWithLoadingContext label="버튼" />~~
+
+  ButtonWithLoadingContext의 출력 메시지를 label 프로퍼티로 변경
+
+  ~~<ButtonWithLoadingContext>버튼</ButtonWithLoadingContext>~~
+
+  ```
+  <ButtonWithLoadingContext label="버튼" />
+  ```
+
+  ~~<ButtonWithLoadingContext>상태 변경</ButtonWithLoadingContext>~~
+
+  ```
+  <ButtonWithLoadingContext label="상태 변경" />
+  ```
+
+  참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/06/HomePageWithProvider.jsx
+
 - p. 317 예제코드
   </Consumer>위쪽의 두개의 중괄호`}}` 중 앞쪽 괄호는 일반 괄호로 변경`)}`해야 합니다.
 

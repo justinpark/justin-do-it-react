@@ -8,7 +8,7 @@ function RowBComponent() {
 }
 
 function RowCComponent() {
-  return <ButtonWithLoadingContext>버튼</ButtonWithLoadingContext>;
+  return <ButtonWithLoadingContext label="버튼" />;
 }
 
 function TableComponent() {
@@ -24,7 +24,7 @@ class HomePageComponent extends PureComponent {
     return (
       <LoadingProvider>
         <TableComponent />
-        <ButtonWithLoadingContext>상태 변경</ButtonWithLoadingContext>
+        <ButtonWithLoadingContext label="상태 변경" />
       </LoadingProvider>
     );
   }
