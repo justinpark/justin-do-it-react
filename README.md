@@ -137,6 +137,16 @@ import Button from '../04/Button';
 
   참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/06/HomePageWithProvider.jsx
 
+- p. 282 공급자 반환하는 커링 함수 만들기 설명 부분
+  ~~this.state~~를 보면 [contextKey]라고
+
+  getChildContext()를 보면 [contextKey]라고
+
+- p. 284 예제코드
+  HomePageComponentWithTwoProvider 클래스 선언 앞에 export 추가
+
+  **export** class HomePageComponentWithTwoProvider extends PureComponent {...}
+
 - p. 317 예제코드
   </Consumer>위쪽의 두개의 중괄호`}}` 중 앞쪽 괄호는 일반 괄호로 변경`)}`해야 합니다.
 
