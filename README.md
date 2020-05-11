@@ -158,6 +158,18 @@ import Button from '../04/Button';
   </Consumer>
 ```
 
+- p. 352 예제코드 경로
+  ~~./src/07/collectionActions01.js~~
+
+  **./src/07/actionscollectionActions01.js**
+
+- p. 358 collectionReducer 예제 코드
+
+  collectionActions파일은 앞의 collectionActions01과 collectionActions02의 코드를 모두 포함한 파일입니다.
+```
+  import { SET_COLLECTION, SET_AGE } from '../actions/collectionActions';
+```
+
 - p.431
   `import * as serviceWorker from './serviceWorker';` 강조 색상 삭제
 
