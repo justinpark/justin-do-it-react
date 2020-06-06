@@ -112,10 +112,10 @@ nvm use 10.10.0
 - p. 279 예제코드
   Button 임포트 부분 추가
 
-  ```
+```
 import ButtonWithLoadingContext from './ButtonWithLoadingContext';
 import Button from '../04/Button';
-  ```
+```
 
   function TableComponent() 아래에 중복 선언된 TableComponent부분 삭제
 
