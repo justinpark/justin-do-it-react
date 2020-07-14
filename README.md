@@ -173,6 +173,17 @@ import Button from '../04/Button';
 - p.431
   `import * as serviceWorker from './serviceWorker';` 강조 색상 삭제
 
+- p.517
+
+  TradeCoinPage.jsx 예제 코드의 handleSubmit 부분에서 createTransaction을 this.props에서 추출하는 부분이 생략되어 있습니다.
+
+  ~~const { name, code } = this.props;~~
+  ```
+    handleSubmit(values, closeModal) {
+      const { name, code, createTransaction } = this.props;
+      ...
+  ```
+
 ## 목차
 
 ### 첫째마당. 리액트 기본 익히기
