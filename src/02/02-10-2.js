@@ -45,41 +45,38 @@ work1and2()
     console.log('done after 600ms:' + msg3);
   });
 
-class Promise {
-  constructor(fn) {
-    function resolve() {
-      if (typeof this.onDone === 'function') {
-        this.onDone.apply(null, arguments);
-      }
-      if (typeof this.onComplete === 'function') {
-        this.onComplete();
-      }
-    }
-    function reject() {
-      if (typeof this.onError === 'function') {
-        this.onError.apply(null, arguments);
-      }
-      if (typeof this.onComplete === 'function') {
-        this.onComplete();
-      }
-    }
-    fn(resolve.bind(this), reject.bind(this));
-  }
-  then(onDone, onError) {
-    this.onDone = onDone;
-    this.onError = onError;
-    return this;
-  }
-  catch(onError) {
-    this.onError = onError;
-    return this;
-  }
-  finally(onComplete) {
-    this.onComplete = onComplete;
-    return this;
-  }
-}
-
-// var fn = function (resolve, reject) {};
-// p = new Promise(fn);
-// p.then(resolver, rejecter).catch(otherRejector).finally(afterResolveorReject);
+// 아래 코드는 이해를 돕기 위한 코드입니다. 실제 코드와는 다르니 내장된 Promise를 사용해주세요.
+// class Promise {
+//   constructor(fn) {
+//     function resolve() {
+//       if (typeof this.onDone === 'function') {
+//         this.onDone.apply(null, arguments);
+//       }
+//       if (typeof this.onComplete === 'function') {
+//         this.onComplete();
+//       }
+//     }
+//     function reject() {
+//       if (typeof this.onError === 'function') {
+//         this.onError.apply(null, arguments);
+//       }
+//       if (typeof this.onComplete === 'function') {
+//         this.onComplete();
+//       }
+//     }
+//     fn(resolve.bind(this), reject.bind(this));
+//   }
+//   then(onDone, onError) {
+//     this.onDone = onDone;
+//     this.onError = onError;
+//     return this;
+//   }
+//   catch(onError) {
+//     this.onError = onError;
+//     return this;
+//   }
+//   finally(onComplete) {
+//     this.onComplete = onComplete;
+//     return this;
+//   }
+// }
