@@ -37,6 +37,15 @@ nvm use 10.10.0
 
   **function** func(...args) { var [first, ...others] = args; }
 
+- p. 70쪽 Promise코드와 관련하여
+
+  - 아래 코드는 개략적인 Promise코드 구조에 대해 이해를 돕고자 추가된 코드로 다음 페이지의 예제들은 node에 내장된 Promise를 사용하여 구동해주세요.
+
+```
+// 아래 코드는 이해를 돕기 위한 코드입니다. 실제 코드와는 다르니 내장된 Promise를 사용해주세요.
+class Promise {...}
+```
+
 - p.112 정답 코드
   ~~this.setState((count) => { count: count + 1; });
 
