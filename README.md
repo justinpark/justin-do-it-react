@@ -83,7 +83,7 @@ class Promise {...}
 
   _(App.test.js파일을 삭제하지 말고 실행하세요.)_
 
-- p.201 <Input> 테스트 코드
+- p.201 `<Input>` 테스트 코드
   expect 예제 한줄 추가
 
 ```
@@ -98,12 +98,55 @@ class Promise {...}
     expect(React.isValidElement(<Input name="test_name" />)).toBeTruthy();
 ```
 
+- p.203 3번 항목 테스트 코드 파일 명명
+  테스트 코드 파일의 이름은 ~~'~_spec.jsx'~~ '~.test.jsx'로 짓겠습니다.
+
+  ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+- p.207
+    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+  7번 항목
+  ~~> yarn test ./src/__tests__/03/Input_spec.jsx~~
+  > `yarn test ./src/__tests__/04/Input.test.jsx`
+
+- p.208
+    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+- p.209
+    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+- p.210
+    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+- p.211
+    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+- p.212
+    ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Text.test.jsx`
+
+- p.214
+    ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Text.test.jsx`
+
+- p.216
+    ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
+  참고 파일: `/src/__tests__/04/Text.test.jsx`
+
 - p. 221 예제코드
   참조 파일 경로에 오타가 있습니다.
 
-  ~~./src/tests/04/CheckoutBox_spec.jsx~~
+  ~~참조파일: ./src/tests/04/CheckoutBox_spec.jsx~~
 
-  `./src/__tests__/04/CheckoutBox_spec.jsx`
+  참조파일: `./src/__tests__/04/CheckBox.test.jsx`
+
 
 - p. 248 아래쪽 예제코드
   WrappedComponent 옆의 전개 연산자 변수가 prop이 아닌 otherProps 으로 변경해야합니다.
