@@ -216,10 +216,26 @@ import Button from '../04/Button';
   </Consumer>
 ```
 
-- p. 352 예제코드 경로
-  ~~./src/07/collectionActions01.js~~
+- P.343
+  참조 파일 경로에 오타(jsx)가 있습니다.
 
-  **./src/07/actionscollectionActions01.js**
+  참조파일: ~~./src/07/reducers/userReducer.jsx~~
+
+  참조파일: `./src/07/reducers/userReducer.js`
+
+- P.348
+  참조 파일 경로에 오타(jsx)가 있습니다.
+
+  참조파일: ~~./src/07/reducers/loadingReducer.jsx~~
+
+  참조파일: `./src/07/reducers/loadingReducer.js`
+
+- p. 352 예제코드 경로
+
+
+  참조파일: ~~./src/07/collectionActions01.js~~
+
+  참조파일: `./src/07/actions/collectionActions01.js`
 
 - p. 358 collectionReducer 예제 코드
 
