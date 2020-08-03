@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
+// import App from './App';
 import App from './08/CoinApp';
 import './doit-ui/app.css';
 // import CoinApp from './03/TodoList';
