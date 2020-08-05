@@ -25,6 +25,12 @@ nvm use 10.10.0
 10.10.0
 ```
 
+- p.23 3. 리액트 앱 생성하기
+
+```
+> yarn create react-app do-it-example
+```
+
 - p.43 예제 코드 6번 항목
 
   ~~var args = Array.prototype.slice.call(this, arguments);~~
