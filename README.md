@@ -12,7 +12,7 @@ https://justin-do-it-react.firebaseapp.com/
 
 ### p.21 1. yarn 설치하기
 
-**윈도우 사용자의 경우 공식 홈페이지(https://classic.yarnpkg.com/en/docs/install#windows-stable)에서 다운로드 받아 설치 가능합니다**
+**윈도우 사용자의 경우 공식 홈페이지[https://classic.yarnpkg.com/en/docs/install#windows-stable]에서 다운로드 받아 설치 가능합니다**
 
 ### p.23 2. create-react-app 설치하기 (2번 영역 전체 삭제)
 
