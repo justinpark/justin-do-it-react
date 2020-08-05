@@ -10,6 +10,22 @@ https://justin-do-it-react.firebaseapp.com/
 
 ## 책 오류 수정
 
+### p.21 1. yarn 설치하기
+
+**윈도우 사용자의 경우 공식 홈페이지(https://classic.yarnpkg.com/en/docs/install#windows-stable)에서 다운로드 받아 설치 가능합니다**
+
+### p.23 2. create-react-app 설치하기 (2번 영역 전체 삭제)
+
+~~yarn global add create-react-app~~
+
+### p.23 3. 리액트 앱 생성하기
+
+**이 책은 create-react-app 버전 2.1.1을 기준으로 작성되었습니다.**
+
+```
+> yarn create react-app do-it-example --scripts-version 2.1.1
+```
+
 ### p.27 nvm으로 노드제이에스 설치하기
 
   현재 현업에서 가장 많이 사용하는 노드제이에스의 버전이 ~~8~~ 10이기 때문입니다.
@@ -24,18 +40,6 @@ https://justin-do-it-react.firebaseapp.com/
 nvm use 10.10.0
 > node -v
 10.10.0
-```
-
-### p.23 2. create-react-app 설치하기 (2번 영역 전체 삭제)
-
-~~yarn global add create-react-app~~
-
-### p.23 3. 리액트 앱 생성하기
-
-**이 책은 create-react-app 버전 2.1.1을 기준으로 작성되었습니다.**
-
-```
-> yarn create react-app do-it-example --scripts-version 2.1.1
 ```
 
 ### p.43 예제 코드 6번 항목
