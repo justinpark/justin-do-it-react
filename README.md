@@ -10,7 +10,7 @@ https://justin-do-it-react.firebaseapp.com/
 
 ## 책 오류 수정
 
-- p.27 nvm으로 노드제이에스 설치하기
+### p.27 nvm으로 노드제이에스 설치하기
 
   현재 현업에서 가장 많이 사용하는 노드제이에스의 버전이 ~~8~~ 10이기 때문입니다.
 
@@ -26,11 +26,11 @@ nvm use 10.10.0
 10.10.0
 ```
 
-- p.23 2. create-react-app 설치하기 (2번 영역 전체 삭제)
+### p.23 2. create-react-app 설치하기 (2번 영역 전체 삭제)
 
 ~~yarn global add create-react-app~~
 
-- p.23 3. 리액트 앱 생성하기
+### p.23 3. 리액트 앱 생성하기
 
 **이 책은 create-react-app 버전 2.1.1을 기준으로 작성되었습니다.**
 
@@ -38,19 +38,19 @@ nvm use 10.10.0
 > yarn create react-app do-it-example --scripts-version 2.1.1
 ```
 
-- p.43 예제 코드 6번 항목
+### p.43 예제 코드 6번 항목
 
   ~~var args = Array.prototype.slice.call(this, arguments);~~
 
   var args = Array.prototype.slice.call(arguments);
 
-- p.44 예제 코드 7번 항목
+### p.44 예제 코드 7번 항목
 
   ~~func(...args) { var [first, ...others] = args; }~~
 
   **function** func(...args) { var [first, ...others] = args; }
 
-- p.70 (Promise코드와 관련하여)
+### p.70 (Promise코드와 관련하여)
 
   ~~(실제 Promise클래스와 약간의 차이는 있습니다.)~~
 
@@ -61,11 +61,12 @@ nvm use 10.10.0
 class Promise {...}
 ```
 
-- p.92 (문장에 App.jsx파일 명명 설명 추가)
+### p.92 (문장에 App.jsx파일 명명 설명 추가)
 
   App 컴포넌트의 내용을 모두 지우고 다음을 입력해보세요. __여기서부터 App.js는 App.jsx로 변경하여 사용하겠습니다.__
 
-- p.112 정답 코드
+### p.112 정답 코드
+
   ~~this.setState((count) => { count: count + 1; });
 
   - 중괄호{} 앞뒤로 괄호()가 포함되어야 합니다. 또한 인자 count 양쪽으로 중괄호{}를 포함하여 객체 추출식으로 state값 중 count값을 추출해야합니다.
@@ -78,7 +79,7 @@ class Promise {...}
 
 참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/03/Counter.jsx#L13
 
-- p.146 예제 코드
+### p.146 예제 코드
 
   - constructor에 정의된 window.addEventListener(...) 구문을 componentDidMount 함수 안으로 옮기셔야 초기 스크롤 시 undefined 오류가 발생하지 않습니다.
 
@@ -97,31 +98,33 @@ class Promise {...}
   }
 ```
 
-- p.154 스토리북 설치
+### p.154 스토리북 설치
 
 **이 책은 스토리북 버전 5.2를 기준으로 작성되었습니다.**
 ```
 > yarn add --dev @storybook/react@5.2.6
 ```
 
-- p.161 addon-actions 설치
+### p.161 addon-actions 설치
 
 ```
 > yarn add --dev @storybook/addons@5.2.6 @storybook/addon-actions@5.2.6
 ```
 
-- p.163 addon-jsx 설치
+### p.163 addon-jsx 설치
 
 ```
 > yarn add --dev storybook-addon-jsx@7.1.13
 ```
 
-- p.200 테스트 코드 실행
+### p.200 테스트 코드 실행
+
   ~~./src/App.test.js 파일을 삭제한 다음 실행하세요.~~
 
   _(App.test.js파일을 삭제하지 말고 실행하세요.)_
 
-- p.201 `<Input>` 테스트 코드
+### p.201 `<Input>` 테스트 코드
+
   expect 예제 한줄 추가
 
 ```
@@ -136,13 +139,13 @@ class Promise {...}
     expect(React.isValidElement(<Input name="test_name" />)).toBeTruthy();
 ```
 
-- p.203 3번 항목 테스트 코드 파일 명명
+### p.203 3번 항목 테스트 코드 파일 명명
   테스트 코드 파일의 이름은 ~~'~_spec.jsx'~~ '~.test.jsx'로 짓겠습니다.
 
   ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
   참고 파일: `/src/__tests__/04/Input.test.jsx`
 
-- p.207
+### p.207 참조 파일 경로에 오타가 있습니다.
     ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
   참고 파일: `/src/__tests__/04/Input.test.jsx`
 
@@ -150,35 +153,36 @@ class Promise {...}
   ~~> yarn test ./src/__tests__/03/Input_spec.jsx~~
   > `yarn test ./src/__tests__/04/Input.test.jsx`
 
-- p.208
+### p.208 참조 파일 경로에 오타가 있습니다.
     ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
   참고 파일: `/src/__tests__/04/Input.test.jsx`
 
-- p.209
+### p.209 참조 파일 경로에 오타가 있습니다.
     ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
   참고 파일: `/src/__tests__/04/Input.test.jsx`
 
-- p.210
+### p.210 참조 파일 경로에 오타가 있습니다.
     ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
   참고 파일: `/src/__tests__/04/Input.test.jsx`
 
-- p.211
+### p.211 참조 파일 경로에 오타가 있습니다.
     ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
   참고 파일: `/src/__tests__/04/Input.test.jsx`
 
-- p.212
+### p.212 참조 파일 경로에 오타가 있습니다.
     ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
   참고 파일: `/src/__tests__/04/Text.test.jsx`
 
-- p.214
+### p.214 참조 파일 경로에 오타가 있습니다.
     ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
   참고 파일: `/src/__tests__/04/Text.test.jsx`
 
-- p.216
+### p.216 참조 파일 경로에 오타가 있습니다.
+
     ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
   참고 파일: `/src/__tests__/04/Text.test.jsx`
 
-- p. 221 예제코드
+### p. 221 예제코드
   참조 파일 경로에 오타가 있습니다.
 
   ~~참조파일: ./src/tests/04/CheckoutBox_spec.jsx~~
@@ -186,20 +190,20 @@ class Promise {...}
   참조파일: `./src/__tests__/04/CheckBox.test.jsx`
 
 
-- p. 248 아래쪽 예제코드
+### p. 248 아래쪽 예제코드
   WrappedComponent 옆의 전개 연산자 변수가 prop이 아닌 otherProps 으로 변경해야합니다.
 
   ~~<WrappedComponent {...props} />~~
 
   `<WrappedComponent {...otherProps} />`
 
-- p. 273 예제코드
+### p. 273 예제코드
   주석 1번 ButtonWithContext는 지면 부족으로 코드가 누락되었습니다.
   다음 참조 파일을 참조하여 추가해주세요.
 
   참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/06/ButtonWithContext.jsx
 
-- p. 279 예제코드
+### p. 279 예제코드
   Button 임포트 부분 추가
 
 ```
@@ -227,17 +231,17 @@ import Button from '../04/Button';
 
   참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/06/HomePageWithProvider.jsx
 
-- p. 282 공급자 반환하는 커링 함수 만들기 설명 부분
+### p. 282 공급자 반환하는 커링 함수 만들기 설명 부분
   ~~this.state~~를 보면 [contextKey]라고
 
   getChildContext()를 보면 [contextKey]라고
 
-- p. 284 예제코드
+### p. 284 예제코드
   HomePageComponentWithTwoProvider 클래스 선언 앞에 export 추가
 
   **export** class HomePageComponentWithTwoProvider extends PureComponent {...}
 
-- p. 317 예제코드
+### p.317 예제코드
   </Consumer>위쪽의 두개의 중괄호`}}` 중 앞쪽 괄호는 일반 괄호로 변경`)}`해야 합니다.
 
 ```
@@ -248,38 +252,36 @@ import Button from '../04/Button';
   </Consumer>
 ```
 
-- P.343
-  참조 파일 경로에 오타(jsx)가 있습니다.
+### p.343 참조 파일 경로에 오타(jsx)가 있습니다.
 
   참조파일: ~~./src/07/reducers/userReducer.jsx~~
 
   참조파일: `./src/07/reducers/userReducer.js`
 
-- P.348
-  참조 파일 경로에 오타(jsx)가 있습니다.
+### p.348 참조 파일 경로에 오타(jsx)가 있습니다.
 
   참조파일: ~~./src/07/reducers/loadingReducer.jsx~~
 
   참조파일: `./src/07/reducers/loadingReducer.js`
 
-- p. 352 예제코드 경로
+### p. 352 예제코드 경로
 
 
   참조파일: ~~./src/07/collectionActions01.js~~
 
   참조파일: `./src/07/actions/collectionActions01.js`
 
-- p. 358 collectionReducer 예제 코드
+### p. 358 collectionReducer 예제 코드
 
   collectionActions파일은 앞의 collectionActions01과 collectionActions02의 코드를 모두 포함한 파일입니다.
 ```
   import { SET_COLLECTION, SET_AGE } from '../actions/collectionActions';
 ```
 
-- p.431
+### p.431
   `import * as serviceWorker from './serviceWorker';` 강조 색상 삭제
 
-- p.517
+### p.517
 
   TradeCoinPage.jsx 예제 코드의 handleSubmit 부분에서 createTransaction을 this.props에서 추출하는 부분이 생략되어 있습니다.
 
