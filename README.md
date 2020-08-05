@@ -84,6 +84,25 @@ class Promise {...}
   }
 ```
 
+- p.154 스토리북 설치
+
+**이 책은 스토리북 버전 5.2를 기준으로 작성되었습니다.**
+```
+> yarn add --dev @storybook/react@5.2.6
+```
+
+- p.161 addon-actions 설치
+
+```
+> yarn add --dev @storybook/addons@5.2.6 @storybook/addon-actions@5.2.6
+```
+
+- p.163 addon-jsx 설치
+
+```
+> yarn add --dev storybook-addon-jsx@7.1.13
+```
+
 - p.200 테스트 코드 실행
   ~~./src/App.test.js 파일을 삭제한 다음 실행하세요.~~
 
