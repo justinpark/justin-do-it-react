@@ -20,10 +20,10 @@ https://justin-do-it-react.firebaseapp.com/
 
 ### p.23 3. 리액트 앱 생성하기
 
-**이 책은 create-react-app 버전 2.1.1을 기준으로 작성되었습니다.**
+**이 책은 create-react-app 버전 2.1.7을 기준으로 작성되었습니다.**
 
 ```
-> yarn create react-app do-it-example --scripts-version 2.1.1
+> yarn create react-app do-it-example --scripts-version 2.1.7
 ```
 
 ### p.27 nvm으로 노드제이에스 설치하기
@@ -41,6 +41,12 @@ nvm use 10.10.0
 > node -v
 10.10.0
 ```
+
+### p.30 react-scripts 버전 수정
+
+"react-scripts": "2.1.~~1~~"
+
+"react-scripts": "2.1.**7**"
 
 ### p.43 예제 코드 6번 항목
 
