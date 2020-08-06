@@ -207,6 +207,62 @@ class Promise {...}
 
   `<WrappedComponent {...otherProps} />`
 
+### p.261 코드 수정
+
+```
+function Component() {
+  return null;
+}
+
+const ComponentWithX = withX(Component);
+const ComponentWithXandY = withY(ComponentWithX);
+const ComponentWithXandYandZ = withZ(ComponentWithXandY);
+
+// 또는
+const ComponentWithWYZ = withZ(withY(withX(Component)));
+```
+
+### p.261 마지막 compose관련 설명 추가
+
+05-1에서 직접 구현한 compose()함수는 사실 recompose 라이브러리에서 제공했던 것이죠. (추가 부분)
+
+**(다만 recompose의 경우 compose의 경우 적용 순서가 반대 반향인 "오른쪽에서 왼쪽 방향"으로 진행되는 차이가 있습니다. 이는 프로퍼티 전달 방향이 뒤쪽으로 진행되는 것과 관련있습니다.)**
+
+### p.262 코드 예제
+```
+import compose from 'recompose/compose';
+const withXYZ = compose(withZ, withY, withX);
+const ComponentWithXYZ = withXYZ(Component);
+// 혹은
+// const compose(withZ, withY, withX)(Component);
+```
+
+(아래쪽 코드)
+
+```
+import compose from 'recompose/compose';
+import withLoading from './withLoading';
+import withState from' recompose/withState';
+const withLoadData = withState('isLoading', 'setIsLoading', false);
+
+function Component() {
+  return '완료(컴포넌트 출력)';
+}
+const ComponentWithLoading = withLoading('로딩중')(Component);
+const ComponentWithLoadData = withLoadData(Component);
+
+const withLoadingAndLoadData = compose(withLoadData, withLoading('로딩중'));
+// 조합이 올바르지 못한 예: compose(withLoadData, withLoading)
+// 올바르지 못한 예: compose(withLoading('로딩중'), withLoadData)
+export const ComponentWithBoth = withLoadingAndLoadData(Component);
+// 혹은 compose(withLoadData, withLoading('로딩중'))(Component);
+
+```
+
+### p. 263
+
+(2) withLoadingData('로딩 중')을 먼저 조합하면 ~~withLoadingData~~ **withLoadData**의 isLoading 프로퍼티가 withLoading 하이어오더 컴포넌트에 전달되지 않으므로 주의해야 합니다.
+
 ### p. 273 예제코드
   주석 1번 ButtonWithContext는 지면 부족으로 코드가 누락되었습니다.
   다음 참조 파일을 참조하여 추가해주세요.
