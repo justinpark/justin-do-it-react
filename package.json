@@ -7,7 +7,7 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16.3": "^1.4.1",
     "moment": "^2.24.0",
-    "next": "^8.1.0",
+    "next": "^9.3.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
