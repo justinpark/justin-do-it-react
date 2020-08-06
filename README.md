@@ -10,22 +10,6 @@ https://justin-do-it-react.firebaseapp.com/
 
 ## 책 오류 수정
 
-### p.21 1. yarn 설치하기
-
-**윈도우 사용자의 경우 공식 홈페이지 [ https://classic.yarnpkg.com/en/docs/install#windows-stable ] 에서 다운로드 받아 설치 가능합니다**
-
-### p.23 2. create-react-app 설치하기 (2번 영역 전체 삭제)
-
-~~yarn global add create-react-app~~
-
-### p.23 3. 리액트 앱 생성하기
-
-**이 책은 create-react-app 버전 2.1.7을 기준으로 작성되었습니다.**
-
-```
-> yarn create react-app do-it-example --scripts-version 2.1.7
-```
-
 ### p.27 nvm으로 노드제이에스 설치하기
 
   현재 현업에서 가장 많이 사용하는 노드제이에스의 버전이 ~~8~~ 10이기 때문입니다.
@@ -40,6 +24,22 @@ https://justin-do-it-react.firebaseapp.com/
 nvm use 10.10.0
 > node -v
 10.10.0
+```
+
+### p.28 1. yarn 설치하기
+
+**윈도우 사용자의 경우 공식 홈페이지 [ https://classic.yarnpkg.com/en/docs/install#windows-stable ] 에서 다운로드 받아 설치 가능합니다**
+
+### p.28 2. create-react-app 설치하기 (2번 영역 전체 삭제)
+
+~~yarn global add create-react-app~~
+
+### p.28 3. 리액트 앱 생성하기
+
+**이 책은 create-react-app 버전 2.1.7을 기준으로 작성되었습니다.**
+
+```
+> yarn create react-app do-it-example --scripts-version 2.1.7
 ```
 
 ### p.30 react-scripts 버전 수정
@@ -77,7 +77,7 @@ class Promise {...}
 
 ### p.112 정답 코드
 
-  ~~this.setState((count) => { count: count + 1; });
+  ~~this.setState((count) => { count: count + 1; });~~
 
   - 중괄호{} 앞뒤로 괄호()가 포함되어야 합니다. 또한 인자 count 양쪽으로 중괄호{}를 포함하여 객체 추출식으로 state값 중 count값을 추출해야합니다.
 
@@ -143,6 +143,7 @@ class Promise {...}
     expect(React.isValidElement(<Input />)).toBeTruthy();
 ```
 
+4번 항목 예제에도 추가
 ```
     ...
     ReactDOM.unmountComponentAtNode(div);
@@ -153,59 +154,77 @@ class Promise {...}
   테스트 코드 파일의 이름은 ~~'~_spec.jsx'~~ '~.test.jsx'로 짓겠습니다.
 
   ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Input.test.jsx`
 
-### p.207 참조 파일 경로에 오타가 있습니다.
-    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Input.test.jsx`
+  참고 파일: /src/__tests__/04/Input.test.jsx
 
-  7번 항목
-  ~~> yarn test ./src/__tests__/03/Input_spec.jsx~~
-  > `yarn test ./src/__tests__/04/Input.test.jsx`
+### p.207 참조 파일 경로에 오타가 있습니다
+
+~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+
+참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+7번 항목
+
+~~> yarn test ./src/__tests__/03/Input_spec.jsx~~
+
+`> yarn test ./src/__tests__/04/Input.test.jsx`
 
 ### p.208 참조 파일 경로에 오타가 있습니다.
-    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+
+참고 파일: `/src/__tests__/04/Input.test.jsx`
 
 ### p.209 참조 파일 경로에 오타가 있습니다.
-    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+
+참고 파일: `/src/__tests__/04/Input.test.jsx`
 
 ### p.210 참조 파일 경로에 오타가 있습니다.
-    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+
+참고 파일: `/src/__tests__/04/Input.test.jsx`
 
 ### p.211 참조 파일 경로에 오타가 있습니다.
-    ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Input.test.jsx`
+
+~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+
+참고 파일: `/src/__tests__/04/Input.test.jsx`
 
 ### p.212 참조 파일 경로에 오타가 있습니다.
-    ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Text.test.jsx`
+
+~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
+
+참고 파일: `/src/__tests__/04/Text.test.jsx`
 
 ### p.214 참조 파일 경로에 오타가 있습니다.
-    ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Text.test.jsx`
+
+~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
+
+참고 파일: `/src/__tests__/04/Text.test.jsx`
 
 ### p.216 참조 파일 경로에 오타가 있습니다.
 
-    ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
-  참고 파일: `/src/__tests__/04/Text.test.jsx`
+~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
 
-### p. 221 예제코드
-  참조 파일 경로에 오타가 있습니다.
+참고 파일: `/src/__tests__/04/Text.test.jsx`
 
-  ~~참조파일: ./src/tests/04/CheckoutBox_spec.jsx~~
+### p. 221 참조 파일 경로에 오타가 있습니다.
 
-  참조파일: `./src/__tests__/04/CheckBox.test.jsx`
+~~참조파일: ./src/tests/04/CheckoutBox_spec.jsx~~
+
+참조파일: `./src/__tests__/04/CheckBox.test.jsx`
 
 
 ### p. 248 아래쪽 예제코드
-  WrappedComponent 옆의 전개 연산자 변수가 prop이 아닌 otherProps 으로 변경해야합니다.
 
-  ~~<WrappedComponent {...props} />~~
+WrappedComponent 옆의 전개 연산자 변수가 prop이 아닌 otherProps 으로 변경해야합니다.
 
-  `<WrappedComponent {...otherProps} />`
+~~<WrappedComponent {...props} />~~
+
+`<WrappedComponent {...otherProps} />`
 
 ### p.261 코드 수정
 
@@ -229,6 +248,7 @@ const ComponentWithWYZ = withZ(withY(withX(Component)));
 **(다만 recompose의 경우 compose의 경우 적용 순서가 반대 반향인 "오른쪽에서 왼쪽 방향"으로 진행되는 차이가 있습니다. 이는 프로퍼티 전달 방향이 뒤쪽으로 진행되는 것과 관련있습니다.)**
 
 ### p.262 코드 예제
+
 ```
 import compose from 'recompose/compose';
 const withXYZ = compose(withZ, withY, withX);
@@ -277,38 +297,41 @@ import ButtonWithLoadingContext from './ButtonWithLoadingContext';
 import Button from '../04/Button';
 ```
 
-  function TableComponent() 아래에 중복 선언된 TableComponent부분 삭제
+function TableComponent() 아래에 중복 선언된 TableComponent부분 삭제
 
-  ~~const TableComponent = () => <ButtonWithLoadingContext label="버튼" />~~
+~~const TableComponent = () => <ButtonWithLoadingContext label="버튼" />~~
 
-  ButtonWithLoadingContext의 출력 메시지를 label 프로퍼티로 변경
+ButtonWithLoadingContext의 출력 메시지를 label 프로퍼티로 변경
 
-  ~~<ButtonWithLoadingContext>버튼</ButtonWithLoadingContext>~~
+~~<ButtonWithLoadingContext>버튼</ButtonWithLoadingContext>~~
 
-  ```
-  <ButtonWithLoadingContext label="버튼" />
-  ```
+```
+<ButtonWithLoadingContext label="버튼" />
+```
 
-  ~~<ButtonWithLoadingContext>상태 변경</ButtonWithLoadingContext>~~
+~~<ButtonWithLoadingContext>상태 변경</ButtonWithLoadingContext>~~
 
-  ```
-  <ButtonWithLoadingContext label="상태 변경" />
-  ```
+```
+<ButtonWithLoadingContext label="상태 변경" />
+```
 
   참조: https://github.com/justinpark/justin-do-it-react/blob/master/src/06/HomePageWithProvider.jsx
 
 ### p. 282 공급자 반환하는 커링 함수 만들기 설명 부분
-  ~~this.state~~를 보면 [contextKey]라고
 
-  getChildContext()를 보면 [contextKey]라고
+~~this.state~~를 보면 [contextKey]라고
+
+getChildContext()를 보면 [contextKey]라고
 
 ### p. 284 예제코드
-  HomePageComponentWithTwoProvider 클래스 선언 앞에 export 추가
 
-  **export** class HomePageComponentWithTwoProvider extends PureComponent {...}
+HomePageComponentWithTwoProvider 클래스 선언 앞에 export 추가
+
+**export** class HomePageComponentWithTwoProvider extends PureComponent {...}
 
 ### p.317 예제코드
-  </Consumer>위쪽의 두개의 중괄호`}}` 중 앞쪽 괄호는 일반 괄호로 변경`)}`해야 합니다.
+
+</Consumer>위쪽의 두개의 중괄호`}}` 중 앞쪽 괄호는 일반 괄호로 변경`)}`해야 합니다.
 
 ```
   <Consumer>
@@ -320,43 +343,46 @@ import Button from '../04/Button';
 
 ### p.343 참조 파일 경로에 오타(jsx)가 있습니다.
 
-  참조파일: ~~./src/07/reducers/userReducer.jsx~~
+참조파일: ~~./src/07/reducers/userReducer.jsx~~
 
-  참조파일: `./src/07/reducers/userReducer.js`
+참조파일: `./src/07/reducers/userReducer.js`
 
 ### p.348 참조 파일 경로에 오타(jsx)가 있습니다.
 
-  참조파일: ~~./src/07/reducers/loadingReducer.jsx~~
+참조파일: ~~./src/07/reducers/loadingReducer.jsx~~
 
-  참조파일: `./src/07/reducers/loadingReducer.js`
+참조파일: `./src/07/reducers/loadingReducer.js`
 
 ### p. 352 예제코드 경로
 
+참조파일: ~~./src/07/collectionActions01.js~~
 
-  참조파일: ~~./src/07/collectionActions01.js~~
-
-  참조파일: `./src/07/actions/collectionActions01.js`
+참조파일: `./src/07/actions/collectionActions01.js`
 
 ### p. 358 collectionReducer 예제 코드
 
-  collectionActions파일은 앞의 collectionActions01과 collectionActions02의 코드를 모두 포함한 파일입니다.
+collectionActions파일은 앞의 collectionActions01과 collectionActions02의 코드를 모두 포함한 파일입니다.
 ```
   import { SET_COLLECTION, SET_AGE } from '../actions/collectionActions';
 ```
 
 ### p.431
-  `import * as serviceWorker from './serviceWorker';` 강조 색상 삭제
+
+`import * as serviceWorker from './serviceWorker';` 강조 색상 삭제
 
 ### p.517
 
-  TradeCoinPage.jsx 예제 코드의 handleSubmit 부분에서 createTransaction을 this.props에서 추출하는 부분이 생략되어 있습니다.
+TradeCoinPage.jsx 예제 코드의 handleSubmit 부분에서 createTransaction을 this.props에서 추출하는 부분이 생략되어 있습니다.
 
-  ~~const { name, code } = this.props;~~
-  ```
-    handleSubmit(values, closeModal) {
-      const { name, code, createTransaction } = this.props;
-      ...
-  ```
+~~const { name, code } = this.props;~~
+
+```
+  handleSubmit(values, closeModal) {
+    const { name, code, createTransaction } = this.props;
+    ...
+```
+
+(+ 연한 빗줄 굶은 색상으로 변경 요청)
 
 ## 목차
 
