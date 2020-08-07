@@ -150,12 +150,18 @@ class Promise {...}
     expect(React.isValidElement(<Input name="test_name" />)).toBeTruthy();
 ```
 
-### p.203 3번 항목 테스트 코드 파일 명명
+### p.203 3번 항목 테스트 코드 파일 명명  (3쇄 요청)
   테스트 코드 파일의 이름은 ~~'~_spec.jsx'~~ '~.test.jsx'로 짓겠습니다.
 
   ~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
 
   참고 파일: /src/__tests__/04/Input.test.jsx
+
+### p.204 참조 파일 경로에 오타가 있습니다 (3쇄 요청)
+
+~~참고 파일: /src/__tests__/04/Input_spec.jsx~~
+
+참고 파일: `/src/__tests__/04/Input.test.jsx`
 
 ### p.207 참조 파일 경로에 오타가 있습니다
 
@@ -193,7 +199,7 @@ class Promise {...}
 
 참고 파일: `/src/__tests__/04/Input.test.jsx`
 
-### p.212 참조 파일 경로에 오타가 있습니다.
+### p.212 참조 파일 경로에 오타가 있습니다.  (3쇄 요청)
 
 ~~참고 파일: /src/__tests__/04/Text_spec.jsx~~
 
@@ -279,11 +285,11 @@ export const ComponentWithBoth = withLoadingAndLoadData(Component);
 
 ```
 
-### p. 263
+### p. 263 (3쇄 요청)
 
-(2) withLoadingData('로딩 중')을 먼저 조합하면 ~~withLoadingData~~ **withLoadData**의 isLoading 프로퍼티가 withLoading 하이어오더 컴포넌트에 전달되지 않으므로 주의해야 합니다.
+(2) withLoading~~Data~~('로딩 중')을 먼저 조합하면 ~~withLoadingData~~ **withLoadData**의 isLoading 프로퍼티가 withLoading 하이어오더 컴포넌트에 전달되지 않으므로 주의해야 합니다.
 
-### p. 273 예제코드
+### p. 275 설명 (3쇄 요청)
   주석 1번 ButtonWithContext는 지면 부족으로 코드가 누락되었습니다.
   다음 참조 파일을 참조하여 추가해주세요.
 
@@ -381,8 +387,11 @@ TradeCoinPage.jsx 예제 코드의 handleSubmit 부분에서 createTransaction�
     const { name, code, createTransaction } = this.props;
     ...
 ```
+### p.517 빗줄 굶은 색상으로 변경 요청 (3쇄 요청)
+~~Api
+~~.post('/transactions', formValues)~~
+~~.then(() => closeModal());~~
 
-(+ 연한 빗줄 굶은 색상으로 변경 요청)
 
 ## 목차
 
