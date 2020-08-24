@@ -223,6 +223,12 @@ class Promise {...}
 
 참조파일: `./src/__tests__/04/CheckBox.test.jsx`
 
+### p.231 05-1-compose코드에 오타가 있습니다  (3쇄 요청)
+
+~~return funcArry.reduce(~~
+
+`return funcArr.reduce(`
+
 
 ### p. 248 아래쪽 예제코드
 
