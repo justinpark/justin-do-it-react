@@ -313,6 +313,8 @@ function TableComponent() 아래에 중복 선언된 TableComponent부분 삭제
 
 ~~const TableComponent = () => <ButtonWithLoadingContext label="버튼" />~~
 
+### p.279 (3쇄 요청)
+
 ButtonWithLoadingContext의 출력 메시지를 label 프로퍼티로 변경
 
 ~~<ButtonWithLoadingContext>버튼</ButtonWithLoadingContext>~~
