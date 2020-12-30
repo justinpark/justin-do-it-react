@@ -223,6 +223,16 @@ class Promise {...}
 
 참조파일: `./src/__tests__/04/CheckBox.test.jsx`
 
+7번 코드 오류 (`required` -> `test_name`)
+~~expect(changeStub).toHaveBeenCalledWith('required', true);~~
+
+expect(changeStub).toHaveBeenCalledWith('test_name', true);
+
+8번 코드 오류 (`required` -> `test_name`)
+~~expect(changeStub).toHaveBeenCalledWith('required', false);~~
+
+expect(changeStub).toHaveBeenCalledWith('test_name', false);
+
 ### p.231 05-1-compose코드에 오타가 있습니다  (3쇄 요청)
 
 ~~return funcArry.reduce(~~
